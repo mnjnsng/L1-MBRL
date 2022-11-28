@@ -1,0 +1,3778 @@
+Logging to experiments/gym_cheetahA01/gym_cheetahA01/Fri-28-Oct-2022-03-06-00-PM-CDT_gym_cheetahA01_trpo_iteration_20_seed3421
+Print configuration .....
+{'env_name': 'gym_cheetahA01', 'random_seeds': [4321, 2314, 2341, 3421], 'save_variables': False, 'model_save_dir': '/tmp/gym_cheetahA01_models/', 'restore_variables': False, 'start_onpol_iter': 0, 'onpol_iters': 33, 'num_path_random': 6, 'num_path_onpol': 6, 'env_horizon': 1000, 'max_train_data': 200000, 'max_val_data': 100000, 'discard_ratio': 0.0, 'dynamics': {'pre_training': {'mode': 'intrinsic_reward', 'itr': 0, 'policy_itr': 20}, 'model': 'nn', 'ensemble': True, 'ensemble_model_count': 5, 'enable_particle_ensemble': True, 'particles': 5, 'intrinsic_reward_only': False, 'external_reward_evaluation_interval': 5, 'obs_var': 1.0, 'intrinsic_reward_coeff': 1.0, 'ita': 1.0, 'mode': 'random', 'val': True, 'n_layers': 4, 'hidden_size': 1000, 'activation': 'relu', 'batch_size': 1000, 'learning_rate': 0.001, 'epochs': 200, 'kfac_params': {'learning_rate': 0.1, 'damping': 0.001, 'momentum': 0.9, 'kl_clip': 0.0001, 'cov_ema_decay': 0.99}}, 'policy': {'network_shape': [32, 32], 'init_logstd': 0.0, 'activation': 'tanh', 'reinitialize_every_itr': False}, 'trpo': {'horizon': 1000, 'gamma': 0.99, 'step_size': 0.01, 'iterations': 20, 'batch_size': 50000, 'gae': 0.95}, 'trpo_ext_reward': {'horizon': 1000, 'gamma': 0.99, 'step_size': 0.01, 'iterations': 20, 'batch_size': 50000, 'gae': 0.95}, 'algo': 'trpo'}
+Generating random rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating random rollouts.
+Creating normalization for training data.
+Done creating normalization for training data.
+Particle ensemble enabled? True
+An ensemble of 5 dynamics model <class 'model.dynamics.NNDynamicsModel'> initialized
+Train dynamics model with intrinsic reward only? False
+Pre-training enabled. Using only intrinsic reward.
+Pre-training dynamics model for 0 iterations...
+Done pre-training dynamics model.
+Using external reward only.
+itr #0 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.383030503988266
+Validation loss = 0.14801925420761108
+Validation loss = 0.09269993007183075
+Validation loss = 0.07582893967628479
+Validation loss = 0.06739541888237
+Validation loss = 0.0677550807595253
+Validation loss = 0.06104579195380211
+Validation loss = 0.05924346670508385
+Validation loss = 0.05844397097826004
+Validation loss = 0.05989730358123779
+Validation loss = 0.05915265530347824
+Validation loss = 0.06359405815601349
+Validation loss = 0.05487152189016342
+Validation loss = 0.05500953271985054
+Validation loss = 0.059289902448654175
+Validation loss = 0.05397263914346695
+Validation loss = 0.05418303608894348
+Validation loss = 0.05533970892429352
+Validation loss = 0.053013257682323456
+Validation loss = 0.05195344239473343
+Validation loss = 0.05148119479417801
+Validation loss = 0.05066922679543495
+Validation loss = 0.054997049272060394
+Validation loss = 0.05092887207865715
+Validation loss = 0.04893548786640167
+Validation loss = 0.049751732498407364
+Validation loss = 0.06609085947275162
+Validation loss = 0.05053386837244034
+Validation loss = 0.06333309412002563
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.4677368700504303
+Validation loss = 0.1504639983177185
+Validation loss = 0.10064323991537094
+Validation loss = 0.0789862871170044
+Validation loss = 0.06977969408035278
+Validation loss = 0.06755907833576202
+Validation loss = 0.061221618205308914
+Validation loss = 0.05817801505327225
+Validation loss = 0.06475809216499329
+Validation loss = 0.0575043223798275
+Validation loss = 0.060488976538181305
+Validation loss = 0.05616360157728195
+Validation loss = 0.05547134578227997
+Validation loss = 0.05337303504347801
+Validation loss = 0.055032048374414444
+Validation loss = 0.05054269731044769
+Validation loss = 0.05091923475265503
+Validation loss = 0.05842217803001404
+Validation loss = 0.05046279728412628
+Validation loss = 0.05497336387634277
+Validation loss = 0.04976777732372284
+Validation loss = 0.05116591602563858
+Validation loss = 0.04974263161420822
+Validation loss = 0.05141787230968475
+Validation loss = 0.048916082829236984
+Validation loss = 0.05361073836684227
+Validation loss = 0.0518348291516304
+Validation loss = 0.04873707890510559
+Validation loss = 0.04914596676826477
+Validation loss = 0.05046234279870987
+Validation loss = 0.06388863176107407
+Validation loss = 0.04992067813873291
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.5240741968154907
+Validation loss = 0.1473732888698578
+Validation loss = 0.10091187059879303
+Validation loss = 0.08028218150138855
+Validation loss = 0.07852675020694733
+Validation loss = 0.06897204369306564
+Validation loss = 0.06708218157291412
+Validation loss = 0.06914332509040833
+Validation loss = 0.059934359043836594
+Validation loss = 0.06099157780408859
+Validation loss = 0.06015291064977646
+Validation loss = 0.07329268753528595
+Validation loss = 0.057477917522192
+Validation loss = 0.054718613624572754
+Validation loss = 0.05899759382009506
+Validation loss = 0.05542832612991333
+Validation loss = 0.05489996075630188
+Validation loss = 0.0520298108458519
+Validation loss = 0.05297011137008667
+Validation loss = 0.07655437290668488
+Validation loss = 0.05176418274641037
+Validation loss = 0.05121368542313576
+Validation loss = 0.05179676041007042
+Validation loss = 0.051410526037216187
+Validation loss = 0.0537731871008873
+Validation loss = 0.04882647842168808
+Validation loss = 0.05118118226528168
+Validation loss = 0.05465967580676079
+Validation loss = 0.049671247601509094
+Validation loss = 0.05098698288202286
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.5712927579879761
+Validation loss = 0.1450148969888687
+Validation loss = 0.09553410112857819
+Validation loss = 0.079849973320961
+Validation loss = 0.07106772065162659
+Validation loss = 0.06940193474292755
+Validation loss = 0.06484819948673248
+Validation loss = 0.06276975572109222
+Validation loss = 0.06065279245376587
+Validation loss = 0.06657540798187256
+Validation loss = 0.05910015106201172
+Validation loss = 0.05529303103685379
+Validation loss = 0.05808619037270546
+Validation loss = 0.0544242337346077
+Validation loss = 0.05480388179421425
+Validation loss = 0.05425240099430084
+Validation loss = 0.05687085539102554
+Validation loss = 0.05166110396385193
+Validation loss = 0.05898275971412659
+Validation loss = 0.050969526171684265
+Validation loss = 0.05171601474285126
+Validation loss = 0.05171254277229309
+Validation loss = 0.054222047328948975
+Validation loss = 0.050199270248413086
+Validation loss = 0.05191840976476669
+Validation loss = 0.05297436565160751
+Validation loss = 0.049349650740623474
+Validation loss = 0.05831558257341385
+Validation loss = 0.05054263398051262
+Validation loss = 0.07851716876029968
+Validation loss = 0.049260567873716354
+Validation loss = 0.05947273224592209
+Validation loss = 0.04958920180797577
+Validation loss = 0.05437689274549484
+Validation loss = 0.05081580951809883
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.5221792459487915
+Validation loss = 0.15200737118721008
+Validation loss = 0.09351660311222076
+Validation loss = 0.07732582092285156
+Validation loss = 0.07222333550453186
+Validation loss = 0.0679936632514
+Validation loss = 0.06841714680194855
+Validation loss = 0.06655843555927277
+Validation loss = 0.06350798904895782
+Validation loss = 0.05939549207687378
+Validation loss = 0.06049434840679169
+Validation loss = 0.05823897570371628
+Validation loss = 0.059322014451026917
+Validation loss = 0.08971530199050903
+Validation loss = 0.05488845333456993
+Validation loss = 0.05425073951482773
+Validation loss = 0.0551481619477272
+Validation loss = 0.052823036909103394
+Validation loss = 0.05458449572324753
+Validation loss = 0.056264180690050125
+Validation loss = 0.05317796766757965
+Validation loss = 0.0546419620513916
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | -391     |
+| Iteration     | 0        |
+| MaximumReturn | -294     |
+| MinimumReturn | -478     |
+| TotalSamples  | 8000     |
+----------------------------
+itr #1 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.11637099832296371
+Validation loss = 0.08794376254081726
+Validation loss = 0.08584682643413544
+Validation loss = 0.07903635501861572
+Validation loss = 0.07314293831586838
+Validation loss = 0.07328826189041138
+Validation loss = 0.07468201220035553
+Validation loss = 0.06699567288160324
+Validation loss = 0.06742925941944122
+Validation loss = 0.06794983148574829
+Validation loss = 0.06398265808820724
+Validation loss = 0.06848667562007904
+Validation loss = 0.06316910684108734
+Validation loss = 0.06342986971139908
+Validation loss = 0.06337319314479828
+Validation loss = 0.0725129023194313
+Validation loss = 0.0625261515378952
+Validation loss = 0.06457429379224777
+Validation loss = 0.06156502291560173
+Validation loss = 0.062139660120010376
+Validation loss = 0.06398764997720718
+Validation loss = 0.061951179057359695
+Validation loss = 0.06941850483417511
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.1203957051038742
+Validation loss = 0.086647167801857
+Validation loss = 0.0798872634768486
+Validation loss = 0.07451489567756653
+Validation loss = 0.06921409070491791
+Validation loss = 0.06996731460094452
+Validation loss = 0.06849642097949982
+Validation loss = 0.06616587936878204
+Validation loss = 0.06734734028577805
+Validation loss = 0.0657883733510971
+Validation loss = 0.06572216749191284
+Validation loss = 0.07473882287740707
+Validation loss = 0.06549922376871109
+Validation loss = 0.06425639986991882
+Validation loss = 0.06496579945087433
+Validation loss = 0.06383279711008072
+Validation loss = 0.06354881078004837
+Validation loss = 0.065452441573143
+Validation loss = 0.06220105290412903
+Validation loss = 0.06918869912624359
+Validation loss = 0.06017949432134628
+Validation loss = 0.06424666941165924
+Validation loss = 0.06258468329906464
+Validation loss = 0.061446867883205414
+Validation loss = 0.0648975521326065
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.12115496397018433
+Validation loss = 0.08512890338897705
+Validation loss = 0.08067639172077179
+Validation loss = 0.07807379215955734
+Validation loss = 0.07334469258785248
+Validation loss = 0.07495113462209702
+Validation loss = 0.0700216069817543
+Validation loss = 0.06691449880599976
+Validation loss = 0.06619374454021454
+Validation loss = 0.06472771614789963
+Validation loss = 0.06409598886966705
+Validation loss = 0.06670989096164703
+Validation loss = 0.06481628865003586
+Validation loss = 0.07176192104816437
+Validation loss = 0.07115957140922546
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.1244051456451416
+Validation loss = 0.08684700727462769
+Validation loss = 0.0806952640414238
+Validation loss = 0.07734037935733795
+Validation loss = 0.07545536011457443
+Validation loss = 0.08123491704463959
+Validation loss = 0.0856865793466568
+Validation loss = 0.0698709636926651
+Validation loss = 0.06772169470787048
+Validation loss = 0.06702771782875061
+Validation loss = 0.06479154527187347
+Validation loss = 0.06654627621173859
+Validation loss = 0.06421083211898804
+Validation loss = 0.0633498877286911
+Validation loss = 0.06162634119391441
+Validation loss = 0.06149585172533989
+Validation loss = 0.06147368252277374
+Validation loss = 0.07938797771930695
+Validation loss = 0.06081218644976616
+Validation loss = 0.061865389347076416
+Validation loss = 0.08469726145267487
+Validation loss = 0.062178969383239746
+Validation loss = 0.06027311086654663
+Validation loss = 0.061028026044368744
+Validation loss = 0.059168100357055664
+Validation loss = 0.05850096046924591
+Validation loss = 0.061796627938747406
+Validation loss = 0.06093694269657135
+Validation loss = 0.05952955782413483
+Validation loss = 0.061389077454805374
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.11922993510961533
+Validation loss = 0.08697456121444702
+Validation loss = 0.0832725465297699
+Validation loss = 0.07878080755472183
+Validation loss = 0.07181370258331299
+Validation loss = 0.06955580413341522
+Validation loss = 0.07279074937105179
+Validation loss = 0.06782311946153641
+Validation loss = 0.0748697966337204
+Validation loss = 0.06964904814958572
+Validation loss = 0.06989149749279022
+Validation loss = 0.09373195469379425
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | -335     |
+| Iteration     | 1        |
+| MaximumReturn | -281     |
+| MinimumReturn | -373     |
+| TotalSamples  | 12000    |
+----------------------------
+itr #2 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.07612047344446182
+Validation loss = 0.0680757537484169
+Validation loss = 0.06349745392799377
+Validation loss = 0.06332658976316452
+Validation loss = 0.06404711306095123
+Validation loss = 0.05884324014186859
+Validation loss = 0.06401538103818893
+Validation loss = 0.058331895619630814
+Validation loss = 0.05823652818799019
+Validation loss = 0.06516546756029129
+Validation loss = 0.05776570364832878
+Validation loss = 0.05854540690779686
+Validation loss = 0.058664679527282715
+Validation loss = 0.05851602554321289
+Validation loss = 0.05998337268829346
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.08303959667682648
+Validation loss = 0.06363266706466675
+Validation loss = 0.06533009558916092
+Validation loss = 0.06725563853979111
+Validation loss = 0.060677383095026016
+Validation loss = 0.06154748424887657
+Validation loss = 0.06440863758325577
+Validation loss = 0.06297460943460464
+Validation loss = 0.06085401400923729
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.07384175807237625
+Validation loss = 0.06566528230905533
+Validation loss = 0.06877294927835464
+Validation loss = 0.06644628942012787
+Validation loss = 0.06702478975057602
+Validation loss = 0.061880867928266525
+Validation loss = 0.0648740753531456
+Validation loss = 0.06045256927609444
+Validation loss = 0.06675320118665695
+Validation loss = 0.05890423431992531
+Validation loss = 0.05852576717734337
+Validation loss = 0.06133943796157837
+Validation loss = 0.06069647893309593
+Validation loss = 0.05771348252892494
+Validation loss = 0.05949617922306061
+Validation loss = 0.06141328439116478
+Validation loss = 0.0641886368393898
+Validation loss = 0.05867563560605049
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.08457842469215393
+Validation loss = 0.06591635197401047
+Validation loss = 0.06128470227122307
+Validation loss = 0.05912480130791664
+Validation loss = 0.05899263918399811
+Validation loss = 0.05750250816345215
+Validation loss = 0.05676771327853203
+Validation loss = 0.056963738054037094
+Validation loss = 0.05793750658631325
+Validation loss = 0.057355284690856934
+Validation loss = 0.05569629743695259
+Validation loss = 0.058808546513319016
+Validation loss = 0.05849971994757652
+Validation loss = 0.05792360007762909
+Validation loss = 0.059783678501844406
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.07878034561872482
+Validation loss = 0.06490720063447952
+Validation loss = 0.067056804895401
+Validation loss = 0.0708615779876709
+Validation loss = 0.06242479756474495
+Validation loss = 0.06202225014567375
+Validation loss = 0.0613601952791214
+Validation loss = 0.06080229580402374
+Validation loss = 0.06075770780444145
+Validation loss = 0.06338342279195786
+Validation loss = 0.06002797186374664
+Validation loss = 0.061908867210149765
+Validation loss = 0.05894466117024422
+Validation loss = 0.06267451494932175
+Validation loss = 0.05873742327094078
+Validation loss = 0.060209643095731735
+Validation loss = 0.06051136180758476
+Validation loss = 0.060383837670087814
+Validation loss = 0.05888434126973152
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | -375     |
+| Iteration     | 2        |
+| MaximumReturn | -282     |
+| MinimumReturn | -493     |
+| TotalSamples  | 16000    |
+----------------------------
+itr #3 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.05978276580572128
+Validation loss = 0.057647839188575745
+Validation loss = 0.05607113987207413
+Validation loss = 0.05291881412267685
+Validation loss = 0.051460206508636475
+Validation loss = 0.05268148332834244
+Validation loss = 0.050615597516298294
+Validation loss = 0.0516221858561039
+Validation loss = 0.054237350821495056
+Validation loss = 0.048801470547914505
+Validation loss = 0.050354667007923126
+Validation loss = 0.04834496229887009
+Validation loss = 0.051135919988155365
+Validation loss = 0.0486159510910511
+Validation loss = 0.048985108733177185
+Validation loss = 0.048020727932453156
+Validation loss = 0.0512075200676918
+Validation loss = 0.04817134141921997
+Validation loss = 0.050417907536029816
+Validation loss = 0.04880222678184509
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.06363753974437714
+Validation loss = 0.05361685901880264
+Validation loss = 0.05443878471851349
+Validation loss = 0.052092544734478
+Validation loss = 0.051885541528463364
+Validation loss = 0.053747013211250305
+Validation loss = 0.061873629689216614
+Validation loss = 0.05199459195137024
+Validation loss = 0.050298236310482025
+Validation loss = 0.048895031213760376
+Validation loss = 0.05614735186100006
+Validation loss = 0.0509883351624012
+Validation loss = 0.052520863711833954
+Validation loss = 0.04979408532381058
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.05668147653341293
+Validation loss = 0.05329648405313492
+Validation loss = 0.0529380664229393
+Validation loss = 0.050456393510103226
+Validation loss = 0.05136207491159439
+Validation loss = 0.05314308777451515
+Validation loss = 0.05185869336128235
+Validation loss = 0.04998600110411644
+Validation loss = 0.05257878452539444
+Validation loss = 0.053126439452171326
+Validation loss = 0.04881296306848526
+Validation loss = 0.05422511696815491
+Validation loss = 0.048675522208213806
+Validation loss = 0.05495244264602661
+Validation loss = 0.04834621399641037
+Validation loss = 0.04894563555717468
+Validation loss = 0.049849629402160645
+Validation loss = 0.05137953907251358
+Validation loss = 0.051988862454891205
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.06617061048746109
+Validation loss = 0.05163943022489548
+Validation loss = 0.05035199224948883
+Validation loss = 0.050242695957422256
+Validation loss = 0.051448289304971695
+Validation loss = 0.04901736229658127
+Validation loss = 0.048819251358509064
+Validation loss = 0.05039016157388687
+Validation loss = 0.049724988639354706
+Validation loss = 0.050689514726400375
+Validation loss = 0.04903070628643036
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.059834837913513184
+Validation loss = 0.05630217492580414
+Validation loss = 0.05414590984582901
+Validation loss = 0.05193551629781723
+Validation loss = 0.04963576793670654
+Validation loss = 0.05221828818321228
+Validation loss = 0.0510425940155983
+Validation loss = 0.04889623820781708
+Validation loss = 0.050109025090932846
+Validation loss = 0.04939913749694824
+Validation loss = 0.05095367878675461
+Validation loss = 0.05000709742307663
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 292      |
+| Iteration     | 3        |
+| MaximumReturn | 595      |
+| MinimumReturn | -337     |
+| TotalSamples  | 20000    |
+----------------------------
+itr #4 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.10714203119277954
+Validation loss = 0.05742872878909111
+Validation loss = 0.0565304271876812
+Validation loss = 0.05058233067393303
+Validation loss = 0.04893391206860542
+Validation loss = 0.05087655782699585
+Validation loss = 0.04860004037618637
+Validation loss = 0.048935551196336746
+Validation loss = 0.05016070604324341
+Validation loss = 0.04778963327407837
+Validation loss = 0.04977033659815788
+Validation loss = 0.04790560528635979
+Validation loss = 0.05132400989532471
+Validation loss = 0.04845679551362991
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.10577265918254852
+Validation loss = 0.05640273541212082
+Validation loss = 0.0547964982688427
+Validation loss = 0.05209340900182724
+Validation loss = 0.050107914954423904
+Validation loss = 0.05014548450708389
+Validation loss = 0.05112006515264511
+Validation loss = 0.054122429341077805
+Validation loss = 0.04745370149612427
+Validation loss = 0.05167795345187187
+Validation loss = 0.04750237613916397
+Validation loss = 0.05120425298810005
+Validation loss = 0.047375425696372986
+Validation loss = 0.04734620079398155
+Validation loss = 0.04767058417201042
+Validation loss = 0.04759581759572029
+Validation loss = 0.047799251973629
+Validation loss = 0.047193530946969986
+Validation loss = 0.047129321843385696
+Validation loss = 0.05087023973464966
+Validation loss = 0.047138847410678864
+Validation loss = 0.04898077994585037
+Validation loss = 0.04861711338162422
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.09496016055345535
+Validation loss = 0.05440647527575493
+Validation loss = 0.05075569078326225
+Validation loss = 0.04946913197636604
+Validation loss = 0.047998689115047455
+Validation loss = 0.04897366836667061
+Validation loss = 0.049118705093860626
+Validation loss = 0.04944954067468643
+Validation loss = 0.04885340481996536
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.11605370044708252
+Validation loss = 0.05718468874692917
+Validation loss = 0.05076608806848526
+Validation loss = 0.05035910755395889
+Validation loss = 0.05054115131497383
+Validation loss = 0.04872290417551994
+Validation loss = 0.047835201025009155
+Validation loss = 0.047718483954668045
+Validation loss = 0.047126106917858124
+Validation loss = 0.048211775720119476
+Validation loss = 0.048121023923158646
+Validation loss = 0.04574965313076973
+Validation loss = 0.047310721129179
+Validation loss = 0.049199096858501434
+Validation loss = 0.045279551297426224
+Validation loss = 0.045524004846811295
+Validation loss = 0.048968732357025146
+Validation loss = 0.04713740572333336
+Validation loss = 0.0457785502076149
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.0958060547709465
+Validation loss = 0.05686952918767929
+Validation loss = 0.052435535937547684
+Validation loss = 0.05092175677418709
+Validation loss = 0.048256076872348785
+Validation loss = 0.049027226865291595
+Validation loss = 0.04882050305604935
+Validation loss = 0.053984224796295166
+Validation loss = 0.04782728850841522
+Validation loss = 0.04917778819799423
+Validation loss = 0.046101197600364685
+Validation loss = 0.04740780591964722
+Validation loss = 0.048396822065114975
+Validation loss = 0.04613450542092323
+Validation loss = 0.05335313826799393
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | -38.5    |
+| Iteration     | 4        |
+| MaximumReturn | 610      |
+| MinimumReturn | -683     |
+| TotalSamples  | 24000    |
+----------------------------
+itr #5 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.06401392072439194
+Validation loss = 0.05353448912501335
+Validation loss = 0.051756229251623154
+Validation loss = 0.05155015364289284
+Validation loss = 0.055068761110305786
+Validation loss = 0.05101430043578148
+Validation loss = 0.053478602319955826
+Validation loss = 0.05170081928372383
+Validation loss = 0.05274496600031853
+Validation loss = 0.05382460355758667
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.061064448207616806
+Validation loss = 0.054583340883255005
+Validation loss = 0.05328453704714775
+Validation loss = 0.05262017622590065
+Validation loss = 0.05564308166503906
+Validation loss = 0.052479133009910583
+Validation loss = 0.05068543925881386
+Validation loss = 0.05083006992936134
+Validation loss = 0.05128738656640053
+Validation loss = 0.052584826946258545
+Validation loss = 0.051575880497694016
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.06272273510694504
+Validation loss = 0.0562412329018116
+Validation loss = 0.0538661889731884
+Validation loss = 0.054050296545028687
+Validation loss = 0.05287850275635719
+Validation loss = 0.05269763991236687
+Validation loss = 0.05364986136555672
+Validation loss = 0.0538378469645977
+Validation loss = 0.053516972810029984
+Validation loss = 0.057705726474523544
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.06292311102151871
+Validation loss = 0.052223991602659225
+Validation loss = 0.05092663690447807
+Validation loss = 0.05130624398589134
+Validation loss = 0.05123148486018181
+Validation loss = 0.05114120617508888
+Validation loss = 0.051366280764341354
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.05977524444460869
+Validation loss = 0.05431077256798744
+Validation loss = 0.050482865422964096
+Validation loss = 0.051296889781951904
+Validation loss = 0.05148615315556526
+Validation loss = 0.051547128707170486
+Validation loss = 0.052328575402498245
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 442      |
+| Iteration     | 5        |
+| MaximumReturn | 1.01e+03 |
+| MinimumReturn | -686     |
+| TotalSamples  | 28000    |
+----------------------------
+itr #6 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.05352287366986275
+Validation loss = 0.04694980010390282
+Validation loss = 0.04599972814321518
+Validation loss = 0.04495307058095932
+Validation loss = 0.0461689755320549
+Validation loss = 0.046395737677812576
+Validation loss = 0.04397984966635704
+Validation loss = 0.04525888338685036
+Validation loss = 0.04488716274499893
+Validation loss = 0.044516365975141525
+Validation loss = 0.04303731396794319
+Validation loss = 0.043099164962768555
+Validation loss = 0.04548313841223717
+Validation loss = 0.043342869728803635
+Validation loss = 0.044216372072696686
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.05513085797429085
+Validation loss = 0.04677203297615051
+Validation loss = 0.045522309839725494
+Validation loss = 0.04412649944424629
+Validation loss = 0.04406369477510452
+Validation loss = 0.04851179197430611
+Validation loss = 0.04547395184636116
+Validation loss = 0.045388124883174896
+Validation loss = 0.045059822499752045
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.05277083441615105
+Validation loss = 0.0451698899269104
+Validation loss = 0.044709861278533936
+Validation loss = 0.045522771775722504
+Validation loss = 0.045131128281354904
+Validation loss = 0.04471129551529884
+Validation loss = 0.04589088633656502
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.049799513071775436
+Validation loss = 0.045376379042863846
+Validation loss = 0.04558297619223595
+Validation loss = 0.043692540377378464
+Validation loss = 0.043979186564683914
+Validation loss = 0.043345820158720016
+Validation loss = 0.04343327879905701
+Validation loss = 0.04424786567687988
+Validation loss = 0.04255154728889465
+Validation loss = 0.04192731902003288
+Validation loss = 0.04304876923561096
+Validation loss = 0.04380768910050392
+Validation loss = 0.04360098019242287
+Validation loss = 0.04252282902598381
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.053556378930807114
+Validation loss = 0.04734635353088379
+Validation loss = 0.046002406626939774
+Validation loss = 0.04463128373026848
+Validation loss = 0.04460045322775841
+Validation loss = 0.04390344023704529
+Validation loss = 0.04383110627532005
+Validation loss = 0.042722683399915695
+Validation loss = 0.046252310276031494
+Validation loss = 0.04410066083073616
+Validation loss = 0.04909912869334221
+Validation loss = 0.04226240888237953
+Validation loss = 0.04419689252972603
+Validation loss = 0.04616865515708923
+Validation loss = 0.04314581677317619
+Validation loss = 0.04176289588212967
+Validation loss = 0.042241550981998444
+Validation loss = 0.04498321935534477
+Validation loss = 0.04219341278076172
+Validation loss = 0.04436774179339409
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 1.14e+03 |
+| Iteration     | 6        |
+| MaximumReturn | 1.38e+03 |
+| MinimumReturn | 334      |
+| TotalSamples  | 32000    |
+----------------------------
+itr #7 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.04615211486816406
+Validation loss = 0.04069957509636879
+Validation loss = 0.04061909019947052
+Validation loss = 0.04083453118801117
+Validation loss = 0.041261620819568634
+Validation loss = 0.040859609842300415
+Validation loss = 0.0401591882109642
+Validation loss = 0.040178392082452774
+Validation loss = 0.038503795862197876
+Validation loss = 0.04023565351963043
+Validation loss = 0.040190961211919785
+Validation loss = 0.04067188873887062
+Validation loss = 0.04000925272703171
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.04776155203580856
+Validation loss = 0.04176248610019684
+Validation loss = 0.04102063551545143
+Validation loss = 0.041961364448070526
+Validation loss = 0.04143626242876053
+Validation loss = 0.04078657925128937
+Validation loss = 0.04135109856724739
+Validation loss = 0.041554346680641174
+Validation loss = 0.043329447507858276
+Validation loss = 0.03976941853761673
+Validation loss = 0.040351688861846924
+Validation loss = 0.040697477757930756
+Validation loss = 0.03966132551431656
+Validation loss = 0.04280521348118782
+Validation loss = 0.040130238980054855
+Validation loss = 0.03991357982158661
+Validation loss = 0.03943055868148804
+Validation loss = 0.03935511037707329
+Validation loss = 0.03957848995923996
+Validation loss = 0.03977934271097183
+Validation loss = 0.04097365215420723
+Validation loss = 0.04189833998680115
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.047334179282188416
+Validation loss = 0.04187723621726036
+Validation loss = 0.04163597896695137
+Validation loss = 0.04118889570236206
+Validation loss = 0.04116779938340187
+Validation loss = 0.0406026616692543
+Validation loss = 0.040186818689107895
+Validation loss = 0.04040094465017319
+Validation loss = 0.03976529836654663
+Validation loss = 0.042504630982875824
+Validation loss = 0.04363325610756874
+Validation loss = 0.043525539338588715
+Validation loss = 0.041128091514110565
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.0452192947268486
+Validation loss = 0.03869647532701492
+Validation loss = 0.03982008248567581
+Validation loss = 0.038445137441158295
+Validation loss = 0.038550965487957
+Validation loss = 0.038521796464920044
+Validation loss = 0.03730267658829689
+Validation loss = 0.038175929337739944
+Validation loss = 0.03858771175146103
+Validation loss = 0.038012344390153885
+Validation loss = 0.037198975682258606
+Validation loss = 0.03799881041049957
+Validation loss = 0.04402005672454834
+Validation loss = 0.03900197893381119
+Validation loss = 0.03760504722595215
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.04894446209073067
+Validation loss = 0.03866173326969147
+Validation loss = 0.0383274108171463
+Validation loss = 0.03873877599835396
+Validation loss = 0.03798852115869522
+Validation loss = 0.039008937776088715
+Validation loss = 0.040153369307518005
+Validation loss = 0.037695568054914474
+Validation loss = 0.037542592734098434
+Validation loss = 0.04014292359352112
+Validation loss = 0.03713908791542053
+Validation loss = 0.04011593759059906
+Validation loss = 0.03776776045560837
+Validation loss = 0.03847067803144455
+Validation loss = 0.03653678297996521
+Validation loss = 0.038789041340351105
+Validation loss = 0.03742561861872673
+Validation loss = 0.03670614957809448
+Validation loss = 0.038133107125759125
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 326      |
+| Iteration     | 7        |
+| MaximumReturn | 1.53e+03 |
+| MinimumReturn | -635     |
+| TotalSamples  | 36000    |
+----------------------------
+itr #8 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.044855136424303055
+Validation loss = 0.038443274796009064
+Validation loss = 0.036814410239458084
+Validation loss = 0.037419095635414124
+Validation loss = 0.03737920895218849
+Validation loss = 0.03649717941880226
+Validation loss = 0.03712303936481476
+Validation loss = 0.03761832043528557
+Validation loss = 0.03694624453783035
+Validation loss = 0.03590704873204231
+Validation loss = 0.0359472818672657
+Validation loss = 0.03933195397257805
+Validation loss = 0.036273255944252014
+Validation loss = 0.036761652678251266
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.04502493888139725
+Validation loss = 0.039215341210365295
+Validation loss = 0.03718043863773346
+Validation loss = 0.03769161179661751
+Validation loss = 0.03822499141097069
+Validation loss = 0.03537382930517197
+Validation loss = 0.037534765899181366
+Validation loss = 0.03625581040978432
+Validation loss = 0.036947451531887054
+Validation loss = 0.036044612526893616
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.04728759825229645
+Validation loss = 0.03812023252248764
+Validation loss = 0.03734278678894043
+Validation loss = 0.03963117301464081
+Validation loss = 0.03749493509531021
+Validation loss = 0.039454054087400436
+Validation loss = 0.03938212990760803
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.04441504552960396
+Validation loss = 0.037228696048259735
+Validation loss = 0.03690977767109871
+Validation loss = 0.034812524914741516
+Validation loss = 0.03485729545354843
+Validation loss = 0.03503711521625519
+Validation loss = 0.034868739545345306
+Validation loss = 0.035162363201379776
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.04403255879878998
+Validation loss = 0.035502832382917404
+Validation loss = 0.03505076840519905
+Validation loss = 0.03559669107198715
+Validation loss = 0.03450964391231537
+Validation loss = 0.03394416719675064
+Validation loss = 0.03562229126691818
+Validation loss = 0.034605033695697784
+Validation loss = 0.03509492427110672
+Validation loss = 0.035483408719301224
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 332      |
+| Iteration     | 8        |
+| MaximumReturn | 1.71e+03 |
+| MinimumReturn | -676     |
+| TotalSamples  | 40000    |
+----------------------------
+itr #9 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.045255206525325775
+Validation loss = 0.03616822510957718
+Validation loss = 0.035567186772823334
+Validation loss = 0.03635255619883537
+Validation loss = 0.03582075983285904
+Validation loss = 0.03500311076641083
+Validation loss = 0.03494791314005852
+Validation loss = 0.03576815873384476
+Validation loss = 0.03712940961122513
+Validation loss = 0.03559396043419838
+Validation loss = 0.03420542925596237
+Validation loss = 0.034913841634988785
+Validation loss = 0.036822423338890076
+Validation loss = 0.03380747511982918
+Validation loss = 0.03494841605424881
+Validation loss = 0.034718308597803116
+Validation loss = 0.03428369760513306
+Validation loss = 0.03562977537512779
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.04403259977698326
+Validation loss = 0.036113105714321136
+Validation loss = 0.03557652235031128
+Validation loss = 0.035994913429021835
+Validation loss = 0.03539889305830002
+Validation loss = 0.03582167252898216
+Validation loss = 0.0347181037068367
+Validation loss = 0.03609377518296242
+Validation loss = 0.03549288958311081
+Validation loss = 0.03475682809948921
+Validation loss = 0.03454935923218727
+Validation loss = 0.035298291593790054
+Validation loss = 0.03598026558756828
+Validation loss = 0.034650370478630066
+Validation loss = 0.03350842744112015
+Validation loss = 0.03290407359600067
+Validation loss = 0.03405096381902695
+Validation loss = 0.03498796373605728
+Validation loss = 0.03323010727763176
+Validation loss = 0.03354601934552193
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.044030673801898956
+Validation loss = 0.03673207014799118
+Validation loss = 0.0366559699177742
+Validation loss = 0.03830970823764801
+Validation loss = 0.03661004826426506
+Validation loss = 0.037557464092969894
+Validation loss = 0.035173915326595306
+Validation loss = 0.036753542721271515
+Validation loss = 0.037306513637304306
+Validation loss = 0.03897416591644287
+Validation loss = 0.03596697747707367
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.04505764693021774
+Validation loss = 0.03571287915110588
+Validation loss = 0.03459610417485237
+Validation loss = 0.03459881991147995
+Validation loss = 0.034763533622026443
+Validation loss = 0.03560240939259529
+Validation loss = 0.033780477941036224
+Validation loss = 0.034205809235572815
+Validation loss = 0.034227170050144196
+Validation loss = 0.03277577832341194
+Validation loss = 0.03339341655373573
+Validation loss = 0.03858378529548645
+Validation loss = 0.03297779709100723
+Validation loss = 0.0332411453127861
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.039873890578746796
+Validation loss = 0.03476805239915848
+Validation loss = 0.03283252194523811
+Validation loss = 0.03364989161491394
+Validation loss = 0.03436793386936188
+Validation loss = 0.034973133355379105
+Validation loss = 0.033862534910440445
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 888      |
+| Iteration     | 9        |
+| MaximumReturn | 1.9e+03  |
+| MinimumReturn | -647     |
+| TotalSamples  | 44000    |
+----------------------------
+itr #10 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.04235944524407387
+Validation loss = 0.03406525403261185
+Validation loss = 0.03362410515546799
+Validation loss = 0.03497833386063576
+Validation loss = 0.03426621854305267
+Validation loss = 0.03678538650274277
+Validation loss = 0.03382226452231407
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.036802370101213455
+Validation loss = 0.03403960540890694
+Validation loss = 0.034024156630039215
+Validation loss = 0.03303653001785278
+Validation loss = 0.033207520842552185
+Validation loss = 0.03382812440395355
+Validation loss = 0.03131052106618881
+Validation loss = 0.03245457634329796
+Validation loss = 0.03168434277176857
+Validation loss = 0.03207624331116676
+Validation loss = 0.03305719047784805
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.04319508746266365
+Validation loss = 0.03540883958339691
+Validation loss = 0.03801470622420311
+Validation loss = 0.03533364087343216
+Validation loss = 0.035717692226171494
+Validation loss = 0.03553400933742523
+Validation loss = 0.034789860248565674
+Validation loss = 0.034429002553224564
+Validation loss = 0.03490344434976578
+Validation loss = 0.0368330143392086
+Validation loss = 0.0342397578060627
+Validation loss = 0.033814068883657455
+Validation loss = 0.034936532378196716
+Validation loss = 0.03389079496264458
+Validation loss = 0.03700990974903107
+Validation loss = 0.03258321434259415
+Validation loss = 0.033018823713064194
+Validation loss = 0.03313799947500229
+Validation loss = 0.033579979091882706
+Validation loss = 0.03525920584797859
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.040324702858924866
+Validation loss = 0.03351419419050217
+Validation loss = 0.032432809472084045
+Validation loss = 0.03205254301428795
+Validation loss = 0.033941350877285004
+Validation loss = 0.03117138333618641
+Validation loss = 0.0330556258559227
+Validation loss = 0.032714661210775375
+Validation loss = 0.03249739110469818
+Validation loss = 0.033080194145441055
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.04137679561972618
+Validation loss = 0.03247685357928276
+Validation loss = 0.032238688319921494
+Validation loss = 0.03415190801024437
+Validation loss = 0.0325959287583828
+Validation loss = 0.03301228955388069
+Validation loss = 0.03258564695715904
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 442      |
+| Iteration     | 10       |
+| MaximumReturn | 2.04e+03 |
+| MinimumReturn | -587     |
+| TotalSamples  | 48000    |
+----------------------------
+itr #11 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.0386086106300354
+Validation loss = 0.033537719398736954
+Validation loss = 0.03110063634812832
+Validation loss = 0.0305317435413599
+Validation loss = 0.03339361026883125
+Validation loss = 0.030499055981636047
+Validation loss = 0.031254831701517105
+Validation loss = 0.03044828772544861
+Validation loss = 0.03268517926335335
+Validation loss = 0.02974141575396061
+Validation loss = 0.02975991927087307
+Validation loss = 0.03143937513232231
+Validation loss = 0.03092084266245365
+Validation loss = 0.0290547963231802
+Validation loss = 0.030491353943943977
+Validation loss = 0.03203083947300911
+Validation loss = 0.028180887922644615
+Validation loss = 0.030207641422748566
+Validation loss = 0.028814079239964485
+Validation loss = 0.029808809980750084
+Validation loss = 0.03147300332784653
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.038202788680791855
+Validation loss = 0.03173137456178665
+Validation loss = 0.028787290677428246
+Validation loss = 0.030987588688731194
+Validation loss = 0.03012627363204956
+Validation loss = 0.028927050530910492
+Validation loss = 0.029797017574310303
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.0373549722135067
+Validation loss = 0.0318024605512619
+Validation loss = 0.03155020996928215
+Validation loss = 0.03184342384338379
+Validation loss = 0.03218066319823265
+Validation loss = 0.031681571155786514
+Validation loss = 0.02953396737575531
+Validation loss = 0.03057989664375782
+Validation loss = 0.028718866407871246
+Validation loss = 0.029569001868367195
+Validation loss = 0.03146020695567131
+Validation loss = 0.02919650636613369
+Validation loss = 0.0299763772636652
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.03696552664041519
+Validation loss = 0.030462034046649933
+Validation loss = 0.029122985899448395
+Validation loss = 0.029365649446845055
+Validation loss = 0.029163748025894165
+Validation loss = 0.029293688014149666
+Validation loss = 0.02947152592241764
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.036580491811037064
+Validation loss = 0.03228716179728508
+Validation loss = 0.02909952960908413
+Validation loss = 0.029557371512055397
+Validation loss = 0.02954060398042202
+Validation loss = 0.03027220629155636
+Validation loss = 0.03065303899347782
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 984      |
+| Iteration     | 11       |
+| MaximumReturn | 2.21e+03 |
+| MinimumReturn | -421     |
+| TotalSamples  | 52000    |
+----------------------------
+itr #12 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.03184393420815468
+Validation loss = 0.028158051893115044
+Validation loss = 0.02600947394967079
+Validation loss = 0.02561044692993164
+Validation loss = 0.026736823841929436
+Validation loss = 0.02788759022951126
+Validation loss = 0.024696260690689087
+Validation loss = 0.02533796615898609
+Validation loss = 0.026657842099666595
+Validation loss = 0.024971487000584602
+Validation loss = 0.023890674114227295
+Validation loss = 0.02529831789433956
+Validation loss = 0.025183137506246567
+Validation loss = 0.024536045268177986
+Validation loss = 0.0237509123980999
+Validation loss = 0.024980511516332626
+Validation loss = 0.023128099739551544
+Validation loss = 0.02286931686103344
+Validation loss = 0.023417513817548752
+Validation loss = 0.026280345395207405
+Validation loss = 0.022398386150598526
+Validation loss = 0.022686270996928215
+Validation loss = 0.024119911715388298
+Validation loss = 0.022501101717352867
+Validation loss = 0.022632088512182236
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.03232238441705704
+Validation loss = 0.02616739459335804
+Validation loss = 0.025952838361263275
+Validation loss = 0.02822542004287243
+Validation loss = 0.02515997737646103
+Validation loss = 0.026998721063137054
+Validation loss = 0.025977440178394318
+Validation loss = 0.0258281659334898
+Validation loss = 0.024278221651911736
+Validation loss = 0.02419690228998661
+Validation loss = 0.02600998431444168
+Validation loss = 0.024182774126529694
+Validation loss = 0.024283336475491524
+Validation loss = 0.025044815614819527
+Validation loss = 0.023765891790390015
+Validation loss = 0.024646254256367683
+Validation loss = 0.02283754013478756
+Validation loss = 0.02417839877307415
+Validation loss = 0.027463020756840706
+Validation loss = 0.022971894592046738
+Validation loss = 0.02254258655011654
+Validation loss = 0.023395756259560585
+Validation loss = 0.021841606125235558
+Validation loss = 0.023862816393375397
+Validation loss = 0.02632327750325203
+Validation loss = 0.02275129407644272
+Validation loss = 0.021851159632205963
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.03675740212202072
+Validation loss = 0.027540432289242744
+Validation loss = 0.026207175105810165
+Validation loss = 0.025543956086039543
+Validation loss = 0.02905665524303913
+Validation loss = 0.025015873834490776
+Validation loss = 0.026440467685461044
+Validation loss = 0.027607079595327377
+Validation loss = 0.024889515712857246
+Validation loss = 0.025119077414274216
+Validation loss = 0.024689842015504837
+Validation loss = 0.024750420823693275
+Validation loss = 0.02595745213329792
+Validation loss = 0.0243819672614336
+Validation loss = 0.02394881658256054
+Validation loss = 0.024102317169308662
+Validation loss = 0.025875261053442955
+Validation loss = 0.022937165573239326
+Validation loss = 0.02389625646173954
+Validation loss = 0.023418571799993515
+Validation loss = 0.028862498700618744
+Validation loss = 0.022258955985307693
+Validation loss = 0.024017076939344406
+Validation loss = 0.023624718189239502
+Validation loss = 0.02315785549581051
+Validation loss = 0.023359835147857666
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.03133620321750641
+Validation loss = 0.026213388890028
+Validation loss = 0.026110250502824783
+Validation loss = 0.02701018564403057
+Validation loss = 0.025206701830029488
+Validation loss = 0.02475561760365963
+Validation loss = 0.025516044348478317
+Validation loss = 0.025316093116998672
+Validation loss = 0.02656986191868782
+Validation loss = 0.030140293762087822
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.031944673508405685
+Validation loss = 0.02705472521483898
+Validation loss = 0.026678256690502167
+Validation loss = 0.02713833376765251
+Validation loss = 0.02974686771631241
+Validation loss = 0.024673283100128174
+Validation loss = 0.02501986362040043
+Validation loss = 0.027178257703781128
+Validation loss = 0.02403288707137108
+Validation loss = 0.02588864415884018
+Validation loss = 0.024751655757427216
+Validation loss = 0.024691782891750336
+Validation loss = 0.024414239451289177
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 1.98e+03 |
+| Iteration     | 12       |
+| MaximumReturn | 2.33e+03 |
+| MinimumReturn | 1.72e+03 |
+| TotalSamples  | 56000    |
+----------------------------
+itr #13 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.026677068322896957
+Validation loss = 0.02068556472659111
+Validation loss = 0.020777400583028793
+Validation loss = 0.021212367340922356
+Validation loss = 0.021162545308470726
+Validation loss = 0.02124875783920288
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.025223374366760254
+Validation loss = 0.02125171199440956
+Validation loss = 0.02105752006173134
+Validation loss = 0.023375343531370163
+Validation loss = 0.02080942504107952
+Validation loss = 0.02075815387070179
+Validation loss = 0.02194022201001644
+Validation loss = 0.019953114911913872
+Validation loss = 0.021361563354730606
+Validation loss = 0.020301971584558487
+Validation loss = 0.022075297310948372
+Validation loss = 0.019696369767189026
+Validation loss = 0.01944063790142536
+Validation loss = 0.020772302523255348
+Validation loss = 0.022205855697393417
+Validation loss = 0.01863981783390045
+Validation loss = 0.019148360937833786
+Validation loss = 0.020108571276068687
+Validation loss = 0.020208625122904778
+Validation loss = 0.01831701584160328
+Validation loss = 0.019658967852592468
+Validation loss = 0.021285677328705788
+Validation loss = 0.018572194501757622
+Validation loss = 0.01888858713209629
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.027374807745218277
+Validation loss = 0.021764235571026802
+Validation loss = 0.020832551643252373
+Validation loss = 0.024109674617648125
+Validation loss = 0.02011207863688469
+Validation loss = 0.020030613988637924
+Validation loss = 0.022114794701337814
+Validation loss = 0.020417790859937668
+Validation loss = 0.01972442865371704
+Validation loss = 0.02157437987625599
+Validation loss = 0.02014099434018135
+Validation loss = 0.020227402448654175
+Validation loss = 0.019503789022564888
+Validation loss = 0.02315724827349186
+Validation loss = 0.01954958215355873
+Validation loss = 0.01958758570253849
+Validation loss = 0.0206620953977108
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.028814468532800674
+Validation loss = 0.022710610181093216
+Validation loss = 0.023535290732979774
+Validation loss = 0.023428579792380333
+Validation loss = 0.022331003099679947
+Validation loss = 0.02226184494793415
+Validation loss = 0.021894196048378944
+Validation loss = 0.0221271775662899
+Validation loss = 0.022362511605024338
+Validation loss = 0.023295307531952858
+Validation loss = 0.021667350083589554
+Validation loss = 0.020957166329026222
+Validation loss = 0.021859675645828247
+Validation loss = 0.02139672264456749
+Validation loss = 0.0235803984105587
+Validation loss = 0.02010715939104557
+Validation loss = 0.02033190242946148
+Validation loss = 0.021249933168292046
+Validation loss = 0.021999718621373177
+Validation loss = 0.02049931511282921
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.026082636788487434
+Validation loss = 0.02227158471941948
+Validation loss = 0.024047954007983208
+Validation loss = 0.022200196981430054
+Validation loss = 0.025935322046279907
+Validation loss = 0.021958569064736366
+Validation loss = 0.02289116010069847
+Validation loss = 0.023499654605984688
+Validation loss = 0.020781800150871277
+Validation loss = 0.02196212112903595
+Validation loss = 0.024002108722925186
+Validation loss = 0.02111203409731388
+Validation loss = 0.02083534374833107
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 1.86e+03 |
+| Iteration     | 13       |
+| MaximumReturn | 2.17e+03 |
+| MinimumReturn | 1.05e+03 |
+| TotalSamples  | 60000    |
+----------------------------
+itr #14 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.024097613990306854
+Validation loss = 0.01880129612982273
+Validation loss = 0.018804321065545082
+Validation loss = 0.019499806687235832
+Validation loss = 0.018395619466900826
+Validation loss = 0.018326394259929657
+Validation loss = 0.017910225316882133
+Validation loss = 0.02109379880130291
+Validation loss = 0.01758754439651966
+Validation loss = 0.018284745514392853
+Validation loss = 0.0187532939016819
+Validation loss = 0.018362797796726227
+Validation loss = 0.017277197912335396
+Validation loss = 0.017977531999349594
+Validation loss = 0.018249880522489548
+Validation loss = 0.01658918522298336
+Validation loss = 0.021103380247950554
+Validation loss = 0.016884921118617058
+Validation loss = 0.016787178814411163
+Validation loss = 0.018961047753691673
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.022846411913633347
+Validation loss = 0.01831783726811409
+Validation loss = 0.01797018013894558
+Validation loss = 0.017944227904081345
+Validation loss = 0.01995161361992359
+Validation loss = 0.0184163935482502
+Validation loss = 0.017236733809113503
+Validation loss = 0.01783391274511814
+Validation loss = 0.019758472219109535
+Validation loss = 0.018160907551646233
+Validation loss = 0.016926836222410202
+Validation loss = 0.018240323290228844
+Validation loss = 0.017475875094532967
+Validation loss = 0.017034193500876427
+Validation loss = 0.018423279747366905
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.023687371984124184
+Validation loss = 0.018987897783517838
+Validation loss = 0.018239378929138184
+Validation loss = 0.01918463595211506
+Validation loss = 0.02120065875351429
+Validation loss = 0.01784094236791134
+Validation loss = 0.0185732189565897
+Validation loss = 0.019037334248423576
+Validation loss = 0.017502713948488235
+Validation loss = 0.017706632614135742
+Validation loss = 0.01739128679037094
+Validation loss = 0.01707823947072029
+Validation loss = 0.02172279916703701
+Validation loss = 0.017087029293179512
+Validation loss = 0.017639625817537308
+Validation loss = 0.019020484760403633
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.02199237234890461
+Validation loss = 0.01963385008275509
+Validation loss = 0.01884780451655388
+Validation loss = 0.020385446026921272
+Validation loss = 0.01901787891983986
+Validation loss = 0.019527463242411613
+Validation loss = 0.018613623455166817
+Validation loss = 0.02106512524187565
+Validation loss = 0.018531786277890205
+Validation loss = 0.018516933545470238
+Validation loss = 0.02239314652979374
+Validation loss = 0.017592139542102814
+Validation loss = 0.017942387610673904
+Validation loss = 0.01728755794465542
+Validation loss = 0.020094016566872597
+Validation loss = 0.017665905877947807
+Validation loss = 0.01994824968278408
+Validation loss = 0.017837919294834137
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.02543593756854534
+Validation loss = 0.019706277176737785
+Validation loss = 0.019662175327539444
+Validation loss = 0.023303288966417313
+Validation loss = 0.01972905360162258
+Validation loss = 0.019190257415175438
+Validation loss = 0.020680977031588554
+Validation loss = 0.019939817488193512
+Validation loss = 0.019240954890847206
+Validation loss = 0.019268693402409554
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.07e+03 |
+| Iteration     | 14       |
+| MaximumReturn | 2.29e+03 |
+| MinimumReturn | 1.37e+03 |
+| TotalSamples  | 64000    |
+----------------------------
+itr #15 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.020736172795295715
+Validation loss = 0.016037311404943466
+Validation loss = 0.016994185745716095
+Validation loss = 0.017330855131149292
+Validation loss = 0.01621195860207081
+Validation loss = 0.020408228039741516
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.01938028447329998
+Validation loss = 0.016431374475359917
+Validation loss = 0.016464494168758392
+Validation loss = 0.018149282783269882
+Validation loss = 0.015638630837202072
+Validation loss = 0.01616671308875084
+Validation loss = 0.01800168678164482
+Validation loss = 0.015623161569237709
+Validation loss = 0.0187985859811306
+Validation loss = 0.015316436067223549
+Validation loss = 0.015542726032435894
+Validation loss = 0.016381485387682915
+Validation loss = 0.016316760331392288
+Validation loss = 0.015344321727752686
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.020491870120167732
+Validation loss = 0.01650198921561241
+Validation loss = 0.0163673534989357
+Validation loss = 0.01829495280981064
+Validation loss = 0.016037002205848694
+Validation loss = 0.01604435220360756
+Validation loss = 0.016989268362522125
+Validation loss = 0.015277912840247154
+Validation loss = 0.016786091029644012
+Validation loss = 0.0161180067807436
+Validation loss = 0.016202786937355995
+Validation loss = 0.016714073717594147
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.022780828177928925
+Validation loss = 0.0168194267898798
+Validation loss = 0.017149792984128
+Validation loss = 0.019519809633493423
+Validation loss = 0.01611417531967163
+Validation loss = 0.015911806374788284
+Validation loss = 0.016988813877105713
+Validation loss = 0.0169102493673563
+Validation loss = 0.018325984477996826
+Validation loss = 0.01583924889564514
+Validation loss = 0.01608690433204174
+Validation loss = 0.017446070909500122
+Validation loss = 0.018396612256765366
+Validation loss = 0.015198182314634323
+Validation loss = 0.016174159944057465
+Validation loss = 0.016060076653957367
+Validation loss = 0.01589270867407322
+Validation loss = 0.01691213995218277
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.022485997527837753
+Validation loss = 0.017425768077373505
+Validation loss = 0.018028881400823593
+Validation loss = 0.01885369047522545
+Validation loss = 0.01864524558186531
+Validation loss = 0.0177812147885561
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.07e+03 |
+| Iteration     | 15       |
+| MaximumReturn | 2.46e+03 |
+| MinimumReturn | 791      |
+| TotalSamples  | 68000    |
+----------------------------
+itr #16 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.0186215378344059
+Validation loss = 0.014984198845922947
+Validation loss = 0.015852196142077446
+Validation loss = 0.015382800251245499
+Validation loss = 0.01674819365143776
+Validation loss = 0.01474064588546753
+Validation loss = 0.015737729147076607
+Validation loss = 0.015045886859297752
+Validation loss = 0.015455933287739754
+Validation loss = 0.014598612673580647
+Validation loss = 0.016203414648771286
+Validation loss = 0.014105514623224735
+Validation loss = 0.013580412603914738
+Validation loss = 0.015961123630404472
+Validation loss = 0.014131853356957436
+Validation loss = 0.013634268194437027
+Validation loss = 0.01596604287624359
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.017725536599755287
+Validation loss = 0.015039920806884766
+Validation loss = 0.014679839834570885
+Validation loss = 0.015824995934963226
+Validation loss = 0.014138489961624146
+Validation loss = 0.014968693256378174
+Validation loss = 0.01601637899875641
+Validation loss = 0.015673253685235977
+Validation loss = 0.013900620862841606
+Validation loss = 0.015818698331713676
+Validation loss = 0.01441370602697134
+Validation loss = 0.014865878969430923
+Validation loss = 0.014137577265501022
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.016764238476753235
+Validation loss = 0.014751680195331573
+Validation loss = 0.01632484421133995
+Validation loss = 0.014323685318231583
+Validation loss = 0.015682240948081017
+Validation loss = 0.01432959083467722
+Validation loss = 0.014077194966375828
+Validation loss = 0.015625324100255966
+Validation loss = 0.01480993814766407
+Validation loss = 0.015190545469522476
+Validation loss = 0.016271129250526428
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.021736280992627144
+Validation loss = 0.014850487001240253
+Validation loss = 0.015529178082942963
+Validation loss = 0.015307060442864895
+Validation loss = 0.0162243340164423
+Validation loss = 0.014259508810937405
+Validation loss = 0.015203430317342281
+Validation loss = 0.015641653910279274
+Validation loss = 0.014627905562520027
+Validation loss = 0.01564883626997471
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.020549578592181206
+Validation loss = 0.017034567892551422
+Validation loss = 0.017335884273052216
+Validation loss = 0.017369059845805168
+Validation loss = 0.017007801681756973
+Validation loss = 0.015430557541549206
+Validation loss = 0.016856281086802483
+Validation loss = 0.01767229661345482
+Validation loss = 0.015885882079601288
+Validation loss = 0.016707153990864754
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 1.8e+03  |
+| Iteration     | 16       |
+| MaximumReturn | 2.36e+03 |
+| MinimumReturn | 1.07e+03 |
+| TotalSamples  | 72000    |
+----------------------------
+itr #17 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.018261471763253212
+Validation loss = 0.014468037523329258
+Validation loss = 0.013715686276555061
+Validation loss = 0.017669295892119408
+Validation loss = 0.013264522887766361
+Validation loss = 0.013987217098474503
+Validation loss = 0.013648515567183495
+Validation loss = 0.012846610508859158
+Validation loss = 0.014623100869357586
+Validation loss = 0.01277325488626957
+Validation loss = 0.013270391151309013
+Validation loss = 0.013973724097013474
+Validation loss = 0.013273093849420547
+Validation loss = 0.012544309720396996
+Validation loss = 0.013703071512281895
+Validation loss = 0.01338651031255722
+Validation loss = 0.012979108840227127
+Validation loss = 0.012563568539917469
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.016166063025593758
+Validation loss = 0.013987185433506966
+Validation loss = 0.014883003197610378
+Validation loss = 0.01416070107370615
+Validation loss = 0.015060345642268658
+Validation loss = 0.013332611881196499
+Validation loss = 0.015754491090774536
+Validation loss = 0.013047569431364536
+Validation loss = 0.013337302953004837
+Validation loss = 0.016793012619018555
+Validation loss = 0.01299562118947506
+Validation loss = 0.01317531056702137
+Validation loss = 0.014188740402460098
+Validation loss = 0.012805129401385784
+Validation loss = 0.015119816176593304
+Validation loss = 0.012803083285689354
+Validation loss = 0.013332689180970192
+Validation loss = 0.01673903502523899
+Validation loss = 0.012640010565519333
+Validation loss = 0.012780621647834778
+Validation loss = 0.013340886682271957
+Validation loss = 0.012927995063364506
+Validation loss = 0.012986608780920506
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.016061360016465187
+Validation loss = 0.015016332268714905
+Validation loss = 0.014028962701559067
+Validation loss = 0.014108709059655666
+Validation loss = 0.013305284082889557
+Validation loss = 0.015010222792625427
+Validation loss = 0.013647799380123615
+Validation loss = 0.013502252288162708
+Validation loss = 0.01734733022749424
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.0181643795222044
+Validation loss = 0.01426599733531475
+Validation loss = 0.014598851092159748
+Validation loss = 0.01572880707681179
+Validation loss = 0.014103746972978115
+Validation loss = 0.013601685874164104
+Validation loss = 0.016376418992877007
+Validation loss = 0.013303658924996853
+Validation loss = 0.013185244053602219
+Validation loss = 0.014585908502340317
+Validation loss = 0.0164024755358696
+Validation loss = 0.013458672910928726
+Validation loss = 0.014300612732768059
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.020413143560290337
+Validation loss = 0.01631418615579605
+Validation loss = 0.015453536063432693
+Validation loss = 0.017282497137784958
+Validation loss = 0.015232907608151436
+Validation loss = 0.014973453246057034
+Validation loss = 0.015404037199914455
+Validation loss = 0.014986975118517876
+Validation loss = 0.015275301411747932
+Validation loss = 0.01480486337095499
+Validation loss = 0.014253265224397182
+Validation loss = 0.017865601927042007
+Validation loss = 0.014317793771624565
+Validation loss = 0.015021228231489658
+Validation loss = 0.020880555734038353
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 1.74e+03 |
+| Iteration     | 17       |
+| MaximumReturn | 2.49e+03 |
+| MinimumReturn | -350     |
+| TotalSamples  | 76000    |
+----------------------------
+itr #18 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.015205325558781624
+Validation loss = 0.01265743002295494
+Validation loss = 0.014021175913512707
+Validation loss = 0.012078355997800827
+Validation loss = 0.01297727506607771
+Validation loss = 0.012423860840499401
+Validation loss = 0.012187748216092587
+Validation loss = 0.01289571076631546
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.014782659709453583
+Validation loss = 0.012562409043312073
+Validation loss = 0.012993479147553444
+Validation loss = 0.012361533008515835
+Validation loss = 0.012318424880504608
+Validation loss = 0.01365129929035902
+Validation loss = 0.012055457569658756
+Validation loss = 0.012409809976816177
+Validation loss = 0.012114784680306911
+Validation loss = 0.013226556591689587
+Validation loss = 0.011170265264809132
+Validation loss = 0.01221536099910736
+Validation loss = 0.012520134449005127
+Validation loss = 0.011412831954658031
+Validation loss = 0.015068519860506058
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.017260925844311714
+Validation loss = 0.012473071925342083
+Validation loss = 0.013832470402121544
+Validation loss = 0.01693137362599373
+Validation loss = 0.013104181736707687
+Validation loss = 0.01431606337428093
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.016554133966565132
+Validation loss = 0.013523194007575512
+Validation loss = 0.013508876785635948
+Validation loss = 0.013062242418527603
+Validation loss = 0.012608349323272705
+Validation loss = 0.013214686885476112
+Validation loss = 0.013874681666493416
+Validation loss = 0.013140098191797733
+Validation loss = 0.013242600485682487
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.016701800748705864
+Validation loss = 0.014321951195597649
+Validation loss = 0.014059722423553467
+Validation loss = 0.013189501129090786
+Validation loss = 0.01452010590583086
+Validation loss = 0.013916106894612312
+Validation loss = 0.013914075680077076
+Validation loss = 0.013959144242107868
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 1.41e+03 |
+| Iteration     | 18       |
+| MaximumReturn | 2.41e+03 |
+| MinimumReturn | -340     |
+| TotalSamples  | 80000    |
+----------------------------
+itr #19 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.014355379156768322
+Validation loss = 0.011759611777961254
+Validation loss = 0.01248171366751194
+Validation loss = 0.011791517958045006
+Validation loss = 0.012095131911337376
+Validation loss = 0.011494198814034462
+Validation loss = 0.01280413568019867
+Validation loss = 0.011846569366753101
+Validation loss = 0.011550004594027996
+Validation loss = 0.013602733612060547
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.014148516580462456
+Validation loss = 0.011853925883769989
+Validation loss = 0.011839275248348713
+Validation loss = 0.011694394052028656
+Validation loss = 0.01142982579767704
+Validation loss = 0.01145712286233902
+Validation loss = 0.011799227446317673
+Validation loss = 0.010510806925594807
+Validation loss = 0.012438833713531494
+Validation loss = 0.01147228293120861
+Validation loss = 0.011281060986220837
+Validation loss = 0.012033396400511265
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.014306892640888691
+Validation loss = 0.01264962274581194
+Validation loss = 0.013415860012173653
+Validation loss = 0.013051164336502552
+Validation loss = 0.012690016999840736
+Validation loss = 0.012192043475806713
+Validation loss = 0.013308781199157238
+Validation loss = 0.0122821731492877
+Validation loss = 0.015867965295910835
+Validation loss = 0.011434951797127724
+Validation loss = 0.014997688122093678
+Validation loss = 0.011956576257944107
+Validation loss = 0.011591557413339615
+Validation loss = 0.014079293236136436
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.013793682679533958
+Validation loss = 0.012110589072108269
+Validation loss = 0.012465564534068108
+Validation loss = 0.0129649443551898
+Validation loss = 0.012300009839236736
+Validation loss = 0.012508532032370567
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.015657532960176468
+Validation loss = 0.014118519611656666
+Validation loss = 0.013156468980014324
+Validation loss = 0.012774837203323841
+Validation loss = 0.014290876686573029
+Validation loss = 0.012559277936816216
+Validation loss = 0.013786223717033863
+Validation loss = 0.012760947458446026
+Validation loss = 0.01396024227142334
+Validation loss = 0.013345968909561634
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.05e+03 |
+| Iteration     | 19       |
+| MaximumReturn | 2.38e+03 |
+| MinimumReturn | 723      |
+| TotalSamples  | 84000    |
+----------------------------
+itr #20 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.013210494071245193
+Validation loss = 0.011076902039349079
+Validation loss = 0.011146603152155876
+Validation loss = 0.010804085060954094
+Validation loss = 0.011685723438858986
+Validation loss = 0.011419398710131645
+Validation loss = 0.01143963634967804
+Validation loss = 0.011371986009180546
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.012546239420771599
+Validation loss = 0.0103551484644413
+Validation loss = 0.011180983856320381
+Validation loss = 0.01095556654036045
+Validation loss = 0.01132696308195591
+Validation loss = 0.01197039894759655
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.01319839432835579
+Validation loss = 0.012094484642148018
+Validation loss = 0.011167159304022789
+Validation loss = 0.011855261400341988
+Validation loss = 0.011278695426881313
+Validation loss = 0.011821174062788486
+Validation loss = 0.013362922705709934
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.01353511679917574
+Validation loss = 0.011828798800706863
+Validation loss = 0.011960062198340893
+Validation loss = 0.011304406449198723
+Validation loss = 0.01172512024641037
+Validation loss = 0.01359569188207388
+Validation loss = 0.012019248679280281
+Validation loss = 0.0108182979747653
+Validation loss = 0.011912139132618904
+Validation loss = 0.01092630997300148
+Validation loss = 0.011181487701833248
+Validation loss = 0.011140930466353893
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.012882438488304615
+Validation loss = 0.01235884428024292
+Validation loss = 0.013337565585970879
+Validation loss = 0.012063050642609596
+Validation loss = 0.012958203442394733
+Validation loss = 0.011451018042862415
+Validation loss = 0.011981508694589138
+Validation loss = 0.01473292987793684
+Validation loss = 0.011471999809145927
+Validation loss = 0.011756181716918945
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.46e+03 |
+| Iteration     | 20       |
+| MaximumReturn | 2.61e+03 |
+| MinimumReturn | 2.35e+03 |
+| TotalSamples  | 88000    |
+----------------------------
+itr #21 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.012780540622770786
+Validation loss = 0.010307333432137966
+Validation loss = 0.010733210481703281
+Validation loss = 0.013195413164794445
+Validation loss = 0.010227235034108162
+Validation loss = 0.011827587150037289
+Validation loss = 0.010037862695753574
+Validation loss = 0.010782795026898384
+Validation loss = 0.01098391693085432
+Validation loss = 0.009897727519273758
+Validation loss = 0.010127709247171879
+Validation loss = 0.0104111572727561
+Validation loss = 0.010673459619283676
+Validation loss = 0.009850343689322472
+Validation loss = 0.011440243571996689
+Validation loss = 0.010206121951341629
+Validation loss = 0.010299144312739372
+Validation loss = 0.011068198829889297
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.01263459399342537
+Validation loss = 0.010137519799172878
+Validation loss = 0.010002839379012585
+Validation loss = 0.010520858690142632
+Validation loss = 0.010383821092545986
+Validation loss = 0.010836806148290634
+Validation loss = 0.010096238926053047
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.012738463468849659
+Validation loss = 0.011307130567729473
+Validation loss = 0.01331696193665266
+Validation loss = 0.010959484614431858
+Validation loss = 0.012013099156320095
+Validation loss = 0.010622024536132812
+Validation loss = 0.01110357977449894
+Validation loss = 0.010266252793371677
+Validation loss = 0.012326488271355629
+Validation loss = 0.010839567519724369
+Validation loss = 0.011314082890748978
+Validation loss = 0.010000388137996197
+Validation loss = 0.011043768376111984
+Validation loss = 0.010822823271155357
+Validation loss = 0.010646825656294823
+Validation loss = 0.01109128538519144
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.012324493378400803
+Validation loss = 0.011820000596344471
+Validation loss = 0.01238229963928461
+Validation loss = 0.011186853051185608
+Validation loss = 0.010887544602155685
+Validation loss = 0.011844616383314133
+Validation loss = 0.011513075791299343
+Validation loss = 0.010652760043740273
+Validation loss = 0.011164902709424496
+Validation loss = 0.01066944282501936
+Validation loss = 0.010720686987042427
+Validation loss = 0.011597556062042713
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.01370891835540533
+Validation loss = 0.01143295131623745
+Validation loss = 0.01147743221372366
+Validation loss = 0.012207924388349056
+Validation loss = 0.010751191526651382
+Validation loss = 0.011302373372018337
+Validation loss = 0.011124692857265472
+Validation loss = 0.01234295591711998
+Validation loss = 0.01404415350407362
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.02e+03 |
+| Iteration     | 21       |
+| MaximumReturn | 2.77e+03 |
+| MinimumReturn | -65.1    |
+| TotalSamples  | 92000    |
+----------------------------
+itr #22 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.010961423628032207
+Validation loss = 0.009746597148478031
+Validation loss = 0.010078567080199718
+Validation loss = 0.010655619204044342
+Validation loss = 0.009197426028549671
+Validation loss = 0.010096780955791473
+Validation loss = 0.009811103343963623
+Validation loss = 0.009669986553490162
+Validation loss = 0.009198986925184727
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.01057552732527256
+Validation loss = 0.010390223003923893
+Validation loss = 0.009534462355077267
+Validation loss = 0.010577763430774212
+Validation loss = 0.010113254189491272
+Validation loss = 0.009904973208904266
+Validation loss = 0.010382005013525486
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.012770977802574635
+Validation loss = 0.010293261148035526
+Validation loss = 0.010359641164541245
+Validation loss = 0.009881711564958096
+Validation loss = 0.010686594992876053
+Validation loss = 0.010999027639627457
+Validation loss = 0.010427409783005714
+Validation loss = 0.010027273558080196
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.011958114802837372
+Validation loss = 0.010458700358867645
+Validation loss = 0.01019126083701849
+Validation loss = 0.01067205797880888
+Validation loss = 0.010333243757486343
+Validation loss = 0.009860564954578876
+Validation loss = 0.011442777700722218
+Validation loss = 0.009948274120688438
+Validation loss = 0.01079611573368311
+Validation loss = 0.010680550709366798
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.012398233637213707
+Validation loss = 0.010806233622133732
+Validation loss = 0.011614140123128891
+Validation loss = 0.010475652292370796
+Validation loss = 0.012900958769023418
+Validation loss = 0.01035287044942379
+Validation loss = 0.011170967482030392
+Validation loss = 0.011071758344769478
+Validation loss = 0.01075194776058197
+Validation loss = 0.011319817043840885
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.51e+03 |
+| Iteration     | 22       |
+| MaximumReturn | 2.72e+03 |
+| MinimumReturn | 2.27e+03 |
+| TotalSamples  | 96000    |
+----------------------------
+itr #23 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.01147482916712761
+Validation loss = 0.009817755781114101
+Validation loss = 0.009467189200222492
+Validation loss = 0.01067024003714323
+Validation loss = 0.009990815073251724
+Validation loss = 0.009402378462255001
+Validation loss = 0.009969335980713367
+Validation loss = 0.009007290005683899
+Validation loss = 0.009024187922477722
+Validation loss = 0.009158267639577389
+Validation loss = 0.009410346858203411
+Validation loss = 0.009869682602584362
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.010360127314925194
+Validation loss = 0.00986806582659483
+Validation loss = 0.009611610323190689
+Validation loss = 0.009418305940926075
+Validation loss = 0.009328979067504406
+Validation loss = 0.010585392825305462
+Validation loss = 0.011085444130003452
+Validation loss = 0.009728620760142803
+Validation loss = 0.009094039909541607
+Validation loss = 0.010144189931452274
+Validation loss = 0.009673274122178555
+Validation loss = 0.010709946043789387
+Validation loss = 0.008931384421885014
+Validation loss = 0.009673313237726688
+Validation loss = 0.008852026425302029
+Validation loss = 0.009605228900909424
+Validation loss = 0.009843835607171059
+Validation loss = 0.008995364420115948
+Validation loss = 0.01002456247806549
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.01242115255445242
+Validation loss = 0.009263698942959309
+Validation loss = 0.010218866169452667
+Validation loss = 0.010882924310863018
+Validation loss = 0.00986174400895834
+Validation loss = 0.010166226886212826
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.012646571733057499
+Validation loss = 0.009662927128374577
+Validation loss = 0.010418780148029327
+Validation loss = 0.010157887823879719
+Validation loss = 0.010102623142302036
+Validation loss = 0.00992550328373909
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.01215724740177393
+Validation loss = 0.010252133943140507
+Validation loss = 0.012688707560300827
+Validation loss = 0.010491304099559784
+Validation loss = 0.010738556273281574
+Validation loss = 0.009796926751732826
+Validation loss = 0.011659002862870693
+Validation loss = 0.009467092342674732
+Validation loss = 0.009871969930827618
+Validation loss = 0.009959947317838669
+Validation loss = 0.009695633314549923
+Validation loss = 0.01045658066868782
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.52e+03 |
+| Iteration     | 23       |
+| MaximumReturn | 2.7e+03  |
+| MinimumReturn | 1.76e+03 |
+| TotalSamples  | 100000   |
+----------------------------
+itr #24 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.010327625088393688
+Validation loss = 0.008926022797822952
+Validation loss = 0.009175201877951622
+Validation loss = 0.009315960109233856
+Validation loss = 0.008840126916766167
+Validation loss = 0.009549473412334919
+Validation loss = 0.009059468284249306
+Validation loss = 0.008814006112515926
+Validation loss = 0.009819998405873775
+Validation loss = 0.009733926504850388
+Validation loss = 0.009070044383406639
+Validation loss = 0.009636183269321918
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.009968484751880169
+Validation loss = 0.00897226668894291
+Validation loss = 0.009099303744733334
+Validation loss = 0.009815149940550327
+Validation loss = 0.00910347979515791
+Validation loss = 0.008881117217242718
+Validation loss = 0.009179436601698399
+Validation loss = 0.009264347143471241
+Validation loss = 0.008893934078514576
+Validation loss = 0.009673776105046272
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.011219599284231663
+Validation loss = 0.009479484520852566
+Validation loss = 0.009999984875321388
+Validation loss = 0.009810395538806915
+Validation loss = 0.009525846689939499
+Validation loss = 0.01018615998327732
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.01074549462646246
+Validation loss = 0.010838564485311508
+Validation loss = 0.00957789458334446
+Validation loss = 0.010416042059659958
+Validation loss = 0.0093697439879179
+Validation loss = 0.010009804740548134
+Validation loss = 0.009441754780709743
+Validation loss = 0.010385479778051376
+Validation loss = 0.00904537457972765
+Validation loss = 0.009737011976540089
+Validation loss = 0.009701778180897236
+Validation loss = 0.009373153559863567
+Validation loss = 0.009242294356226921
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.010865450836718082
+Validation loss = 0.009979777038097382
+Validation loss = 0.009835056960582733
+Validation loss = 0.010204208083450794
+Validation loss = 0.010312727652490139
+Validation loss = 0.009348016232252121
+Validation loss = 0.011471212841570377
+Validation loss = 0.009288043715059757
+Validation loss = 0.010130652226507664
+Validation loss = 0.008910882286727428
+Validation loss = 0.010528840124607086
+Validation loss = 0.009255163371562958
+Validation loss = 0.009911183267831802
+Validation loss = 0.009649411775171757
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.52e+03 |
+| Iteration     | 24       |
+| MaximumReturn | 2.9e+03  |
+| MinimumReturn | 1.3e+03  |
+| TotalSamples  | 104000   |
+----------------------------
+itr #25 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.010769701562821865
+Validation loss = 0.008293535560369492
+Validation loss = 0.011233336292207241
+Validation loss = 0.008800724521279335
+Validation loss = 0.00901583768427372
+Validation loss = 0.009397377260029316
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.010365989059209824
+Validation loss = 0.008467474952340126
+Validation loss = 0.009220479987561703
+Validation loss = 0.00964814517647028
+Validation loss = 0.008427083492279053
+Validation loss = 0.008863676339387894
+Validation loss = 0.008444562554359436
+Validation loss = 0.00878582801669836
+Validation loss = 0.008156506344676018
+Validation loss = 0.009193017147481441
+Validation loss = 0.009733293205499649
+Validation loss = 0.008481515571475029
+Validation loss = 0.009889387525618076
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.009960968047380447
+Validation loss = 0.009415993466973305
+Validation loss = 0.009205123409628868
+Validation loss = 0.008901913650333881
+Validation loss = 0.009968411177396774
+Validation loss = 0.009864689782261848
+Validation loss = 0.009494391269981861
+Validation loss = 0.008690295740962029
+Validation loss = 0.009513430297374725
+Validation loss = 0.009997786954045296
+Validation loss = 0.009166411124169827
+Validation loss = 0.009023414924740791
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.009878067299723625
+Validation loss = 0.009314872324466705
+Validation loss = 0.00965052843093872
+Validation loss = 0.009593688882887363
+Validation loss = 0.009262915700674057
+Validation loss = 0.008996726013720036
+Validation loss = 0.009264440275728703
+Validation loss = 0.00963391363620758
+Validation loss = 0.009057102724909782
+Validation loss = 0.008845644071698189
+Validation loss = 0.009794192388653755
+Validation loss = 0.008652039803564548
+Validation loss = 0.009161468595266342
+Validation loss = 0.010076882317662239
+Validation loss = 0.009032991714775562
+Validation loss = 0.008717169053852558
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.009582625702023506
+Validation loss = 0.008991481736302376
+Validation loss = 0.010606289841234684
+Validation loss = 0.009160114452242851
+Validation loss = 0.009931988082826138
+Validation loss = 0.00982555840164423
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.17e+03 |
+| Iteration     | 25       |
+| MaximumReturn | 2.65e+03 |
+| MinimumReturn | 1.15e+03 |
+| TotalSamples  | 108000   |
+----------------------------
+itr #26 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.009648204781115055
+Validation loss = 0.00861332006752491
+Validation loss = 0.008599684573709965
+Validation loss = 0.00844081211835146
+Validation loss = 0.008427594788372517
+Validation loss = 0.008856466971337795
+Validation loss = 0.008739279583096504
+Validation loss = 0.009855722077190876
+Validation loss = 0.008347251452505589
+Validation loss = 0.00903991237282753
+Validation loss = 0.008321455679833889
+Validation loss = 0.009231344796717167
+Validation loss = 0.008119051344692707
+Validation loss = 0.009891021065413952
+Validation loss = 0.008064033463597298
+Validation loss = 0.008070657029747963
+Validation loss = 0.008948196657001972
+Validation loss = 0.007955902256071568
+Validation loss = 0.008332639001309872
+Validation loss = 0.0087279686704278
+Validation loss = 0.009034046903252602
+Validation loss = 0.0080864317715168
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.008992105722427368
+Validation loss = 0.008350308984518051
+Validation loss = 0.008576377294957638
+Validation loss = 0.008422000333666801
+Validation loss = 0.008331621065735817
+Validation loss = 0.008857347071170807
+Validation loss = 0.008307011798024178
+Validation loss = 0.008552896790206432
+Validation loss = 0.00829018373042345
+Validation loss = 0.008820519782602787
+Validation loss = 0.00958099216222763
+Validation loss = 0.008042549714446068
+Validation loss = 0.008204229176044464
+Validation loss = 0.00846702791750431
+Validation loss = 0.00857318751513958
+Validation loss = 0.008190258406102657
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.00918253418058157
+Validation loss = 0.008720753714442253
+Validation loss = 0.009090573526918888
+Validation loss = 0.008602910675108433
+Validation loss = 0.009181413799524307
+Validation loss = 0.008818190544843674
+Validation loss = 0.010817918926477432
+Validation loss = 0.008337820880115032
+Validation loss = 0.008208648301661015
+Validation loss = 0.008650717325508595
+Validation loss = 0.00822814367711544
+Validation loss = 0.009053850546479225
+Validation loss = 0.008824149146676064
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.008902016095817089
+Validation loss = 0.011001113802194595
+Validation loss = 0.009055785834789276
+Validation loss = 0.008240082301199436
+Validation loss = 0.009057395160198212
+Validation loss = 0.009015407413244247
+Validation loss = 0.008815069682896137
+Validation loss = 0.008912076242268085
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.009895097464323044
+Validation loss = 0.009894849732518196
+Validation loss = 0.008480598218739033
+Validation loss = 0.009177275002002716
+Validation loss = 0.00905510876327753
+Validation loss = 0.011017377488315105
+Validation loss = 0.008637342602014542
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.45e+03 |
+| Iteration     | 26       |
+| MaximumReturn | 2.89e+03 |
+| MinimumReturn | 1.25e+03 |
+| TotalSamples  | 112000   |
+----------------------------
+itr #27 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.008448741398751736
+Validation loss = 0.00781987514346838
+Validation loss = 0.008434670977294445
+Validation loss = 0.008434734307229519
+Validation loss = 0.008707880973815918
+Validation loss = 0.008265607990324497
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.008844400756061077
+Validation loss = 0.008366509340703487
+Validation loss = 0.008353735320270061
+Validation loss = 0.0084249721840024
+Validation loss = 0.00822153128683567
+Validation loss = 0.008366011083126068
+Validation loss = 0.008254786022007465
+Validation loss = 0.007948420010507107
+Validation loss = 0.008148634806275368
+Validation loss = 0.00865998025983572
+Validation loss = 0.007771220523864031
+Validation loss = 0.007975703105330467
+Validation loss = 0.008650362491607666
+Validation loss = 0.007852363400161266
+Validation loss = 0.008059882558882236
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.009222999215126038
+Validation loss = 0.008621283806860447
+Validation loss = 0.00856402050703764
+Validation loss = 0.008215813897550106
+Validation loss = 0.008239150047302246
+Validation loss = 0.008371626958251
+Validation loss = 0.008573263883590698
+Validation loss = 0.008678028360009193
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.009322515688836575
+Validation loss = 0.008396780118346214
+Validation loss = 0.00886110682040453
+Validation loss = 0.008308936841785908
+Validation loss = 0.009024075232446194
+Validation loss = 0.007911796681582928
+Validation loss = 0.009317132644355297
+Validation loss = 0.008163808844983578
+Validation loss = 0.008607365190982819
+Validation loss = 0.00809655524790287
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.010100441053509712
+Validation loss = 0.008538425900042057
+Validation loss = 0.008342767134308815
+Validation loss = 0.008749504573643208
+Validation loss = 0.009556129574775696
+Validation loss = 0.008510512299835682
+Validation loss = 0.008489358238875866
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.49e+03 |
+| Iteration     | 27       |
+| MaximumReturn | 2.9e+03  |
+| MinimumReturn | 1.66e+03 |
+| TotalSamples  | 116000   |
+----------------------------
+itr #28 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.00863070972263813
+Validation loss = 0.00756716076284647
+Validation loss = 0.008335284888744354
+Validation loss = 0.007632727734744549
+Validation loss = 0.008221267722547054
+Validation loss = 0.008524117060005665
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.009175152517855167
+Validation loss = 0.007816349156200886
+Validation loss = 0.008585240691900253
+Validation loss = 0.0075451284646987915
+Validation loss = 0.0077398172579705715
+Validation loss = 0.007795780897140503
+Validation loss = 0.008113776333630085
+Validation loss = 0.007980849593877792
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.00905089732259512
+Validation loss = 0.008216671645641327
+Validation loss = 0.00860458891838789
+Validation loss = 0.009895183145999908
+Validation loss = 0.008299916051328182
+Validation loss = 0.008157746866345406
+Validation loss = 0.008541574701666832
+Validation loss = 0.007852154783904552
+Validation loss = 0.009250232949852943
+Validation loss = 0.007973774336278439
+Validation loss = 0.009441044181585312
+Validation loss = 0.007765451446175575
+Validation loss = 0.007754672318696976
+Validation loss = 0.00825656857341528
+Validation loss = 0.007788918446749449
+Validation loss = 0.008886577561497688
+Validation loss = 0.008861527778208256
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.009732061065733433
+Validation loss = 0.008333179168403149
+Validation loss = 0.008258470334112644
+Validation loss = 0.007829069159924984
+Validation loss = 0.00821507629007101
+Validation loss = 0.007612681016325951
+Validation loss = 0.008421027101576328
+Validation loss = 0.008307157084345818
+Validation loss = 0.008093702606856823
+Validation loss = 0.008369220420718193
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.009356401860713959
+Validation loss = 0.008177145384252071
+Validation loss = 0.009172081016004086
+Validation loss = 0.00901029258966446
+Validation loss = 0.00828439649194479
+Validation loss = 0.008961825631558895
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.38e+03 |
+| Iteration     | 28       |
+| MaximumReturn | 2.84e+03 |
+| MinimumReturn | 585      |
+| TotalSamples  | 120000   |
+----------------------------
+itr #29 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.008876250125467777
+Validation loss = 0.008167475461959839
+Validation loss = 0.007808797527104616
+Validation loss = 0.008097700774669647
+Validation loss = 0.007468387018889189
+Validation loss = 0.008627710863947868
+Validation loss = 0.00782893504947424
+Validation loss = 0.007456820923835039
+Validation loss = 0.007836557924747467
+Validation loss = 0.007751828990876675
+Validation loss = 0.008091415278613567
+Validation loss = 0.008551614359021187
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.008554390631616116
+Validation loss = 0.0075339204631745815
+Validation loss = 0.008352074772119522
+Validation loss = 0.007573831360787153
+Validation loss = 0.008158671669661999
+Validation loss = 0.007524455897510052
+Validation loss = 0.007721759378910065
+Validation loss = 0.007427319884300232
+Validation loss = 0.007759807165712118
+Validation loss = 0.008161624893546104
+Validation loss = 0.00880577601492405
+Validation loss = 0.008215623907744884
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.008803058415651321
+Validation loss = 0.007710320875048637
+Validation loss = 0.008887672796845436
+Validation loss = 0.007806055713444948
+Validation loss = 0.008777852170169353
+Validation loss = 0.007996680215001106
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.008829649537801743
+Validation loss = 0.008137823082506657
+Validation loss = 0.008515232242643833
+Validation loss = 0.008187846280634403
+Validation loss = 0.007619420066475868
+Validation loss = 0.008031729608774185
+Validation loss = 0.007703656796365976
+Validation loss = 0.007915000431239605
+Validation loss = 0.008821927942335606
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.008916656486690044
+Validation loss = 0.008030635304749012
+Validation loss = 0.00882572028785944
+Validation loss = 0.00868905708193779
+Validation loss = 0.008446375839412212
+Validation loss = 0.008450872264802456
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.63e+03 |
+| Iteration     | 29       |
+| MaximumReturn | 3.06e+03 |
+| MinimumReturn | 1.39e+03 |
+| TotalSamples  | 124000   |
+----------------------------
+itr #30 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.009461456909775734
+Validation loss = 0.007582979276776314
+Validation loss = 0.008320149965584278
+Validation loss = 0.008217891678214073
+Validation loss = 0.008448638953268528
+Validation loss = 0.008280935697257519
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.008144635707139969
+Validation loss = 0.007723720744252205
+Validation loss = 0.0076416535302996635
+Validation loss = 0.008668837137520313
+Validation loss = 0.007416251115500927
+Validation loss = 0.007697547785937786
+Validation loss = 0.007714339066296816
+Validation loss = 0.007610534783452749
+Validation loss = 0.007545736618340015
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.008458295837044716
+Validation loss = 0.0076516168192029
+Validation loss = 0.008294000290334225
+Validation loss = 0.007709760218858719
+Validation loss = 0.00776003347709775
+Validation loss = 0.008049585856497288
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.007824697531759739
+Validation loss = 0.00844590738415718
+Validation loss = 0.007490349002182484
+Validation loss = 0.007862703874707222
+Validation loss = 0.007637258153408766
+Validation loss = 0.008571727201342583
+Validation loss = 0.007718261796981096
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.009362918324768543
+Validation loss = 0.008036584593355656
+Validation loss = 0.009037923999130726
+Validation loss = 0.008057836443185806
+Validation loss = 0.008804908953607082
+Validation loss = 0.008555679582059383
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.51e+03 |
+| Iteration     | 30       |
+| MaximumReturn | 3e+03    |
+| MinimumReturn | 850      |
+| TotalSamples  | 128000   |
+----------------------------
+itr #31 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.008921653963625431
+Validation loss = 0.007689216174185276
+Validation loss = 0.007693576626479626
+Validation loss = 0.007633212022483349
+Validation loss = 0.007941095158457756
+Validation loss = 0.007755606900900602
+Validation loss = 0.008207341656088829
+Validation loss = 0.007929742336273193
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.008277541026473045
+Validation loss = 0.008486419916152954
+Validation loss = 0.008333088830113411
+Validation loss = 0.0079583078622818
+Validation loss = 0.007477924227714539
+Validation loss = 0.008356127887964249
+Validation loss = 0.007301106583327055
+Validation loss = 0.008260153234004974
+Validation loss = 0.00810149684548378
+Validation loss = 0.00739353708922863
+Validation loss = 0.00774721335619688
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.008918717503547668
+Validation loss = 0.007697776425629854
+Validation loss = 0.008597856387495995
+Validation loss = 0.007475689053535461
+Validation loss = 0.008337311446666718
+Validation loss = 0.008018061518669128
+Validation loss = 0.007413142826408148
+Validation loss = 0.008038323372602463
+Validation loss = 0.007620483171194792
+Validation loss = 0.008049990981817245
+Validation loss = 0.00803495105355978
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.009043670259416103
+Validation loss = 0.007697341963648796
+Validation loss = 0.008078557439148426
+Validation loss = 0.007783354725688696
+Validation loss = 0.008562629111111164
+Validation loss = 0.008198672905564308
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.008274175226688385
+Validation loss = 0.00843360647559166
+Validation loss = 0.008015036582946777
+Validation loss = 0.00890977494418621
+Validation loss = 0.008287710137665272
+Validation loss = 0.008590635843575
+Validation loss = 0.00787891261279583
+Validation loss = 0.008912323974072933
+Validation loss = 0.007853593677282333
+Validation loss = 0.00824187882244587
+Validation loss = 0.00746571458876133
+Validation loss = 0.008095410652458668
+Validation loss = 0.00784839503467083
+Validation loss = 0.009481974877417088
+Validation loss = 0.00795028917491436
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.8e+03  |
+| Iteration     | 31       |
+| MaximumReturn | 3.09e+03 |
+| MinimumReturn | 2.64e+03 |
+| TotalSamples  | 132000   |
+----------------------------
+itr #32 | 
+Fitting dynamics.
+Fitting model 0 (0-based) in the ensemble of 5 models
+Validation loss = 0.008148104883730412
+Validation loss = 0.007383605465292931
+Validation loss = 0.007607730105519295
+Validation loss = 0.007272548507899046
+Validation loss = 0.007452396210283041
+Validation loss = 0.007584219798445702
+Validation loss = 0.007970924489200115
+Validation loss = 0.007544290740042925
+Fitting model 1 (0-based) in the ensemble of 5 models
+Validation loss = 0.007964878343045712
+Validation loss = 0.00764785660430789
+Validation loss = 0.00718205189332366
+Validation loss = 0.008160394616425037
+Validation loss = 0.007916320115327835
+Validation loss = 0.007779910694807768
+Validation loss = 0.007599521894007921
+Fitting model 2 (0-based) in the ensemble of 5 models
+Validation loss = 0.008147740736603737
+Validation loss = 0.008709238842129707
+Validation loss = 0.00762143824249506
+Validation loss = 0.007448532152920961
+Validation loss = 0.008386374451220036
+Validation loss = 0.0070380051620304585
+Validation loss = 0.007757190614938736
+Validation loss = 0.0076515646651387215
+Validation loss = 0.009397529996931553
+Validation loss = 0.007244972977787256
+Fitting model 3 (0-based) in the ensemble of 5 models
+Validation loss = 0.008431443013250828
+Validation loss = 0.008082227781414986
+Validation loss = 0.007853473536670208
+Validation loss = 0.007830451242625713
+Validation loss = 0.007570489775389433
+Validation loss = 0.007643264252692461
+Validation loss = 0.007490964140743017
+Validation loss = 0.007747892290353775
+Validation loss = 0.007429386023432016
+Validation loss = 0.007464360911399126
+Validation loss = 0.007641976699233055
+Validation loss = 0.00749922776594758
+Validation loss = 0.0073040262795984745
+Validation loss = 0.008461972698569298
+Validation loss = 0.007363729178905487
+Validation loss = 0.008483600802719593
+Validation loss = 0.007595328614115715
+Fitting model 4 (0-based) in the ensemble of 5 models
+Validation loss = 0.008111203089356422
+Validation loss = 0.007631012704223394
+Validation loss = 0.007891152054071426
+Validation loss = 0.007854190655052662
+Validation loss = 0.008021928369998932
+Validation loss = 0.007827125489711761
+Done fitting dynamics.
+Updating randomness.
+Done updating randomness.
+Training policy using TRPO.
+Re-initialize init_std.
+Obtaining samples for iteration 0...
+Obtaining samples for iteration 1...
+Obtaining samples for iteration 2...
+Obtaining samples for iteration 3...
+Obtaining samples for iteration 4...
+Obtaining samples for iteration 5...
+Obtaining samples for iteration 6...
+Obtaining samples for iteration 7...
+Obtaining samples for iteration 8...
+Obtaining samples for iteration 9...
+Obtaining samples for iteration 10...
+Obtaining samples for iteration 11...
+Obtaining samples for iteration 12...
+Obtaining samples for iteration 13...
+Obtaining samples for iteration 14...
+Obtaining samples for iteration 15...
+Obtaining samples for iteration 16...
+Obtaining samples for iteration 17...
+Obtaining samples for iteration 18...
+Obtaining samples for iteration 19...
+Done training policy.
+Generating on-policy rollouts.
+Path 0 | total_timesteps 0.
+Path 1 | total_timesteps 1000.
+Path 2 | total_timesteps 2000.
+Path 3 | total_timesteps 3000.
+Path 4 | total_timesteps 4000.
+Path 5 | total_timesteps 5000.
+Done generating on-policy rollouts.
+Updating normalization.
+Done updating normalization.
+----------------------------
+| AverageReturn | 2.94e+03 |
+| Iteration     | 32       |
+| MaximumReturn | 3.16e+03 |
+| MinimumReturn | 2.7e+03  |
+| TotalSamples  | 136000   |
+----------------------------
