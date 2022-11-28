@@ -1,20 +1,17 @@
-# Model-Ensemble Trust-Region Policy Optimization (ME-TRPO)
+# Robust Adaptive Model Based Reinforcement Learning using L1-adaptive control
 
-This repo is based on the original paper 
-Kurutach, Thanard, et al. "Model-Ensemble Trust-Region Policy Optimization." arXiv preprint arXiv:1802.10592 (2018).[link](https://arxiv.org/abs/1802.10592).
 
-We modified the repo to perform benchmarking as part of the [Model Based Reinforcement Learning Benchmarking Library (MBBL)](https://github.com/WilsonWangTHU/mbbl).
-Please refer to the [project page](http://www.cs.toronto.edu/~tingwuwang/mbrl.html) for more information.
-
-We also recommend reading of [this repo](https://github.com/thanard/me-trpo), which is the repo shared by the authors of METRPO
+We modified the repo [this repo](https://github.com/WilsonWangTHU/mbbl-metrpo), which is the repo shared by the authors of MBBL-METRPO
 
 ## Authors
 
-[Xuchan Bao](https://github.com/XuchanBao/)
+[Minjun Sung]
 
-[Guodong Zhang](http://www.cs.toronto.edu/~gdzhang/)
+[Sambhu H. Karumanchi]
 
-[Tingwu Wang](http://www.cs.toronto.edu/~tingwuwang/)
+[Aditya Gahlawat]
+
+[Naira Hovakimyan]
 
 
 ## Prerequisites
