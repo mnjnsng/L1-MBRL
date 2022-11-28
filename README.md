@@ -16,10 +16,10 @@ Naira Hovakimyan
 
 ## RESULTS
 <p align=center>
-<img src="Results/METRPO_final_results.pdf" width=900>
+<img src="Results/data/METRPO_final_results.pdf" width=350>
 </p>
 <p align=center>
-<img src="Result_Table.PNG" width=900>
+<img src="Results/data/Result_Table.PNG" width=350>
 </p>
 
 
