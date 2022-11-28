@@ -14,6 +14,15 @@ Aditya Gahlawat
 Naira Hovakimyan
 
 
+## RESULTS
+<p align=center>
+<img src="Results/METRPO_final_results.pdf" width=900>
+</p>
+<p align=center>
+<img src="Result_Table.PNG" width=900>
+</p>
+
+
 ## Prerequisites
 You need a MuJoCo license, and download MuJoCo 1.31. from 
 https://www.roboti.us/. 
