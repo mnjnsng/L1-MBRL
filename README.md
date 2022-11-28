@@ -14,7 +14,7 @@ Aditya Gahlawat
 Naira Hovakimyan
 
 
-## RESULTS
+## Results
 <p align=center>
 <img src="Results/data/METRPO_final_results.png" width=500>
 </p>
