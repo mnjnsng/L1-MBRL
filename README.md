@@ -1,4 +1,4 @@
-# Robust Adaptive Model Based Reinforcement Learning using L1-adaptive control
+# Robust Adaptive Model Based Reinforcement Learning
 
 
 We modified the repo [this repo](https://github.com/WilsonWangTHU/mbbl-metrpo), which is the repo shared by the authors of MBBL-METRPO
