@@ -5,13 +5,13 @@ We modified the repo [this repo](https://github.com/WilsonWangTHU/mbbl-metrpo), 
 
 ## Authors
 
-[Minjun Sung]
+Minjun Sung
 
-[Sambhu H. Karumanchi]
+Sambhu H. Karumanchi
 
-[Aditya Gahlawat]
+Aditya Gahlawat
 
-[Naira Hovakimyan]
+Naira Hovakimyan
 
 
 ## Prerequisites
@@ -36,8 +36,8 @@ pip install -r requirements.txt
 
 Then please go to [MBBL](https://github.com/WilsonWangTHU/mbbl) to install the mbbl package for the environments.
 
-## Run benchmarking
-To run the benchmarking environments, please refer to `./metrpo_gym_search_new.sh`.
+## Reproduce Results
+To reproduce the results in the paper, please refer to `./metrpo_gym_search_new.sh` and also can be found in the Results folder
 
 ## Run other experiments
 Run experiments using the following command:
