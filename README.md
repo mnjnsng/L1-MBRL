@@ -48,6 +48,14 @@ Then please go to [MBBL](https://github.com/WilsonWangTHU/mbbl) to install the m
 ## Reproduce Results
 To reproduce the results in the paper, please refer to `./metrpo_gym_search_new.sh` and also the figures can be found in the Results folder
 
+## Changing Hyper-parameters
+
+# MBRL Parameters 
+This repo is based on the MBBl-METRPO repo. And therefore we use the same hyper-parameters / arguments system. We recommend looking at their repo or sample scripts under ./demo_scripts.
+
+# L1 Adaptive control Parameters
+The cutoff frequency (&omega_c) and the switching threshold (&epsilon) can be modified in ./libs/misc/data_handling/rollout_sampler.py
+
 ## Run other experiments
 Run experiments using the following command:
 
