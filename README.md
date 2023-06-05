@@ -3,16 +3,6 @@
 
 We modified [this repo](https://github.com/WilsonWangTHU/mbbl-metrpo), which is the repo shared by the authors of MBBL-METRPO
 
-## Authors
-
-Minjun Sung
-
-Sambhu H. Karumanchi
-
-Aditya Gahlawat
-
-Naira Hovakimyan
-
 
 ## Results
 <p align=center>
