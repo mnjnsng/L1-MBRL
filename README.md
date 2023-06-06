@@ -35,9 +35,6 @@ pip install -r requirements.txt
 
 Then please go to [MBBL](https://github.com/WilsonWangTHU/mbbl) to install the mbbl package for the environments.
 
-## Reproduce Results
-To reproduce the results in the paper, please refer to `./metrpo_gym_search_new.sh` and also the figures can be found in the Results folder
-
 ## Changing Hyper-parameters
 
 ### MBRL Parameters 
@@ -57,7 +54,7 @@ Run experiments using the following command:
 
 Experiment results will be logged to `./experiments/<exp_save_dir>/<experiment_name>`
 
-e.g. `python main.py --env half_cheetah --exp_name test-exp --sub_exp_name test-exp-dir`
+e.g. `python main.py --env invertedPendulum --exp_name test-exp --sub_exp_name test-exp-dir --l1_ac 1
 
 
 ## Change configurations
