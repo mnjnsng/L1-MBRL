@@ -14,6 +14,6 @@ for trpo_iteration in 20; do
     sed -i "s/TRPO_ITERATION/${trpo_iteration}/g" configs/params_${env_name}.json
 
     # run the experiments
-    CUDA_VISIBLE_DEVICES=0 python main.py --env $1 --exp_name $exp_name --sub_exp_name test-exp-dir
+    CUDA_VISIBLE_DEVICES=2 python main.py --env $1 --exp_name $exp_name --sub_exp_name 'Testing'
 
 done

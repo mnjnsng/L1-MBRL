@@ -19,7 +19,7 @@
       "policy_itr": 20
     },
     "model": "nn",
-    "ensemble": false,
+    "ensemble": true,
     "ensemble_model_count": 5,
     "enable_particle_ensemble": true,
     "particles": 5,

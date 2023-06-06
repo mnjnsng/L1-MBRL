@@ -98,6 +98,9 @@ class AcrobotEnv(core.Env):
 
     def _step(self, a):
         # Discretize
+
+        a = np.array(a)
+        a += np.random.uniform(low=-0.3, high=0.3, size=a.shape)
         if a[0] < -.33:
             action = 0
         elif a[0] < .33:

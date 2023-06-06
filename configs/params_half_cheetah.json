@@ -1,9 +1,10 @@
 {
   "env_name": "half_cheetah",
-  "random_seeds": [2314],
+  "random_seeds": [4321,2314,2341,3421],
   "save_variables": false,
   "model_save_dir": "/tmp/half_cheetah_models/",
   "restore_variables": false,
+  "epsilon":3,
   "start_onpol_iter": 0,
   "onpol_iters": 33,
   "num_path_random": 6,

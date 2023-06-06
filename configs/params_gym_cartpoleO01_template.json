@@ -6,6 +6,7 @@
   "restore_variables": false,
   "start_onpol_iter": 0,
   "onpol_iters": 40,
+  "epsilon":1,
   "num_path_random": 25,
   "num_path_onpol": 25,
   "env_horizon": 200,

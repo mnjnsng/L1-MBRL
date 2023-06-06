@@ -4,7 +4,6 @@ import logger
 import libs.bnn.sampler as sp
 from libs.bnn.layers import dense
 
-
 class mlp(object):
     def __init__(self,
                  output_size,
@@ -82,6 +81,34 @@ class mlp(object):
 
         return out, l2_loss, dfdx
 
+
+# class mlp(object):
+#     def __init__(self,
+#                  output_size,
+#                  scope='dynamics',
+#                  n_layers=2,
+#                  size=1000,
+#                  activation=tf.nn.relu,
+#                  output_activation=None):
+#         self.output_size = output_size
+#         self.scope = scope
+#         self.n_layers = n_layers
+#         self.size = size
+#         self.activation = activation
+#         self.output_activation = output_activation
+
+#     def __call__(self, input, reuse=False):
+#         out = input
+#         with tf.variable_scope(self.scope, reuse=reuse):
+#             l2_loss = 0.0
+#             for layer_i in range(self.n_layers):
+#                 layer_name = "dense_{}".format(layer_i)
+#                 out = tf.layers.dense(out, self.size, activation=self.activation, name=layer_name)
+#                 with tf.variable_scope(layer_name, reuse=True):
+#                     weight = tf.get_variable("kernel")
+#                     l2_loss += tf.nn.l2_loss(weight)
+#             out = tf.layers.dense(out, self.output_size, activation=self.output_activation)
+#         return out, l2_loss
 
 
 class bnn_mlp(object):
@@ -201,7 +228,7 @@ class DynamicsModel(Dynamics):
 
     def _get_predicted_normalized_deltas(self, states, actions):
         normalized_obs_and_acts = self._get_normalized_obs_and_acts(states, actions)
-        predicted_normalized_deltas, _,_ = self.mlp(normalized_obs_and_acts, reuse=True)
+        predicted_normalized_deltas, _ = self.mlp(normalized_obs_and_acts, reuse=True)
         return predicted_normalized_deltas
 
     def _get_unnormalized_deltas(self, normalized_deltas):
@@ -307,6 +334,18 @@ class NNDynamicsModel(DynamicsModel):
                     if epoch - best_index >= 20:
                         break
 
+    def predict(self, states, actions):
+        assert(len(states) == len(actions))
+        feed_dict = {
+            self.obs_ph: states,
+            self.acts_ph: actions,
+        }
+        unnormalized_deltas = self.sess.run(
+            self.predicted_unnormalized_deltas,
+            feed_dict=feed_dict)
+        return np.array(states)[:, :self.obs_dim] + unnormalized_deltas
+
+
     def jacobian(self, states, actions):
         assert(len(states) == len(actions))
         feed_dict = {
@@ -330,17 +369,6 @@ class NNDynamicsModel(DynamicsModel):
         return std_deltas @ normalized_jacobian_matrix @ std_obs_acts
 
 
-    def predict(self, states, actions):
-        assert(len(states) == len(actions))
-        feed_dict = {
-            self.obs_ph: states,
-            self.acts_ph: actions,
-        }
-        unnormalized_deltas = self.sess.run(
-            self.predicted_unnormalized_deltas,
-            feed_dict=feed_dict)
-        return np.array(states)[:, :self.obs_dim] + unnormalized_deltas
-
     def predict_with_jacobian(self, states, actions):
         return self.predict(states,actions), self.jacobian(states,actions)
 
@@ -358,7 +386,7 @@ class NNDynamicsModel(DynamicsModel):
             labels=labels,
             predictions=predicted_normalized_deltas)
 
-        return mse_loss, l2_loss, predicted_unnormalized_deltas, normalized_jacobian_matrix
+        return mse_loss, l2_loss, predicted_unnormalized_deltas,normalized_jacobian_matrix
 
 
 class BBBDynamicsModel(DynamicsModel):

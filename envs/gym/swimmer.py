@@ -20,6 +20,8 @@ class SwimmerEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         utils.EzPickle.__init__(self)
 
     def _step(self, action):
+        # action = np.array(action)
+        # action += np.random.uniform(low=-0.1, high=0.1, size=action.shape)
         old_ob = self._get_obs()
         self.do_simulation(action, self.frame_skip)
 
@@ -33,6 +35,8 @@ class SwimmerEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         reward = reward_run + reward_ctrl
 
         done = False
+        # ob += np.random.uniform(low=-0.1, high=0.1, size=ob.shape)
+
         return ob, reward, done, {}
 
     def _get_obs(self):

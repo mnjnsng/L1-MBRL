@@ -23,8 +23,6 @@ class fixedSwimmerEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         self.do_simulation(a, self.frame_skip)
         xposafter = self.model.data.qpos[0, 0]
         """
-        # a = np.array(a)
-        # a += np.random.uniform(low=-0.1, high=0.1, size=a.shape)
         self.xposbefore = self.model.data.site_xpos[0][0] / self.dt
         self.do_simulation(a, self.frame_skip)
         self.xposafter = self.model.data.site_xpos[0][0] / self.dt
@@ -34,7 +32,6 @@ class fixedSwimmerEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         reward_ctrl = - ctrl_cost_coeff * np.square(a).sum()
         reward = reward_fwd + reward_ctrl
         ob = self._get_obs()
-        # ob += np.random.uniform(low=-0.1, high=0.1, size=ob.shape)
         return ob, reward, False, dict(reward_fwd=reward_fwd, reward_ctrl=reward_ctrl)
 
     def _get_obs(self):

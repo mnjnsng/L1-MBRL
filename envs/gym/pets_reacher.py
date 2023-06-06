@@ -19,14 +19,14 @@ class Reacher3DEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         mujoco_env.MujocoEnv.__init__(self, os.path.join(dir_path, 'assets/reacher3d.xml'), 2)
 
     def _step(self, a):
-        a = np.array(a)
-        a += np.random.uniform(low=-0.1, high=0.1, size=a.shape)
+        # a = np.array(a)
+        # a += np.random.uniform(low=-0.1, high=0.1, size=a.shape)
         self.do_simulation(a, self.frame_skip)
         ob = self._get_obs()
         reward = -np.sum(np.square(self.get_EE_pos(ob[None]) - self.goal))
         reward -= 0.01 * np.square(a).sum()
         done = False
-        #ob += np.random.uniform(low=-0.1, high=0.1, size=ob.shape)
+        ob += np.random.uniform(low=-0.1, high=0.1, size=ob.shape)
         return ob, reward, done, dict(reward_dist=0, reward_ctrl=0)
 
     def viewer_setup(self):

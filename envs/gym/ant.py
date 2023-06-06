@@ -35,6 +35,7 @@ class AntEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         reward_height = -3.0 * np.square(old_ob[0] - 0.57)
         reward = reward_run + reward_ctrl + reward_height + 1.0  # 1.0 alive
         done = False
+
         ob += np.random.uniform(low=-0.1, high=0.1, size=ob.shape)
         return ob, reward, done, {}
 

@@ -5,7 +5,7 @@
   "model_save_dir": "/tmp/reacher_models/",
   "restore_variables": false,
   "start_onpol_iter": 0,
-  "onpol_iters": 40,
+  "onpol_iters": 200,
   "num_path_random": 100,
   "num_path_onpol": 100,
   "env_horizon": 50,

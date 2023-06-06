@@ -44,7 +44,6 @@ class DynamicsModelEnsemble(Dynamics):
             raise ValueError("The models are not initialized yet!")
         return self.models[0].get_obs_dim()
 
-
     def predict_with_jacobian(self, states, actions):
         jacobians=[]
         predictions=[]

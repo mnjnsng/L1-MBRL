@@ -11,6 +11,8 @@ class LTISystem(object):
         self.D = D
         m = self.A.shape[0]
         self.x = np.zeros((m,1))
+        # self.x = np.zeros((3,1))
+        # self.x = np.zeros((6,1))
 
     def get_next_state(self,u,dt=0.001):
         state_change = self.A.dot(self.x) + self.B.dot(u)
@@ -47,6 +49,12 @@ class L1_adapt(object):
         # low pass filter
         self.wc = wc  # cutoff frequency
         self.lpf = LTISystem(A=-self.wc*np.eye(self.m), B=np.eye(self.m), C=self.wc*np.eye(self.m))
+        # self.lpf = LTISystem(A=np.array([-self.wc]), B=np.array([1]), C=np.array([self.wc]))
+        # self.lpf = LTISystem(A=-self.wc*np.eye(6), B=np.eye(6), C=self.wc*np.eye(6))
+        # self.lpf = LTISystem(A=-self.wc*np.eye(2), B=np.eye(2), C=self.wc*np.eye(2))
+        # self.lpf = LTISystem(A=-self.wc*np.eye(3), B=np.eye(3), C=self.wc*np.eye(3))
+
+        
 
         # Initialize parameters needed for L1 controller
         # Choice of Hurwitz matrix used in piece-wise constant adaptation
@@ -54,6 +62,13 @@ class L1_adapt(object):
         # Initialization of predicted state vector
         self.x_hat = self.x
         self.y_old=0.0
+
+    def low_pass_filter(self,x_new):
+
+        #alpha = dt / (dt + 1 / (2 * np.pi * cutoff))
+        alpha=0.2
+        y_new = x_new * alpha + (1 - alpha) * self.y_old
+        return y_new
 
     def update_error(self):
         return self.x_hat-self.x
@@ -90,6 +105,7 @@ class L1_adapt(object):
         sigma_hat_m, sigma_hat_um = self.adaptive_law(self.x_tilde)
         
         u_l1 = -self.lpf.get_next_state(sigma_hat_m)
+        #u_l1 = -sigma_hat_m
 
         u = u_bl+u_l1.squeeze(-1)
 

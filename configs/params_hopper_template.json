@@ -1,9 +1,10 @@
 {
   "env_name": "hopper",
-  "random_seeds": [2531],
+  "random_seeds": [1234,2531,2231,2431],
   "save_variables": false,
   "model_save_dir": "/tmp/hopper_models/",
   "restore_variables": false,
+  "epsilon":0.3,
   "start_onpol_iter": 0,
   "onpol_iters": 33,
   "num_path_random": 6,

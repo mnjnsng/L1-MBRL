@@ -1,9 +1,10 @@
 {
   "env_name": "invertedPendulum",
-  "random_seeds": [3214,2431,2531,2231],
+  "random_seeds": [2531,3214,2431,2231],
   "save_variables": false,
   "model_save_dir": "/tmp/invertedPendulum_models/",
   "restore_variables": false,
+  "epsilon":1,
   "start_onpol_iter": 0,
   "onpol_iters": 80,
   "num_path_random": 25,

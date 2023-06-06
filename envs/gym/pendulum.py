@@ -29,13 +29,13 @@ class PendulumEnv(gym.Env):
 
     def _step(self, u):
         th, thdot = self.state  # th := theta
-        #u = np.array(u)
-        #u += np.random.uniform(low=-0.1, high=0.1, size=u.shape)
-
         '''
         theta, thetadot = self.state
         return np.array([np.cos(theta), np.sin(theta), thetadot])
         '''
+
+        #u = np.array(u)
+        #u += np.random.uniform(low=-0.1, high=0.1, size=u.shape)
 
         # for the reward
         y, x, thetadot = np.cos(th), np.sin(th), thdot

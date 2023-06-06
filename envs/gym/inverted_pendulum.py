@@ -12,16 +12,12 @@ class InvertedPendulumEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
     def _step(self, a):
         # reward = 1.0
-        # a = np.array(a)
-        # a += np.random.uniform(low=-0.1, high=0.1, size=a.shape)
         reward = self._get_reward()
         self.do_simulation(a, self.frame_skip)
         ob = self._get_obs()
         # notdone = np.isfinite(ob).all() and (np.abs(ob[1]) <= .2)
         # done = not notdone
         done = False
-        ob += np.random.uniform(low=-0.1, high=0.1, size=ob.shape)
-
         return ob, reward, done, {}
 
     def reset_model(self):

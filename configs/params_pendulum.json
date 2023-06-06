@@ -1,6 +1,6 @@
 {
   "env_name": "pendulum",
-  "random_seeds": [3214,2431,2531,2231],
+  "random_seeds": [2531,2231],
   "save_variables": false,
   "model_save_dir": "/tmp/pendulum_models/",
   "restore_variables": false,

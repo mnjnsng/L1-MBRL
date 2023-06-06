@@ -34,7 +34,18 @@ register(
     kwargs={'frame_skip': 4},
     max_episode_steps=1000,
 )
-
+register(
+    id='MBRLHopperA01-v0',
+    entry_point='envs.gym.hopperA01:HopperEnv',
+    kwargs={'frame_skip': 4},
+    max_episode_steps=1000,
+)
+register(
+    id='MBRLHopperO01-v0',
+    entry_point='envs.gym.hopperO01:HopperEnv',
+    kwargs={'frame_skip': 4},
+    max_episode_steps=1000,
+)
 register(
     id='MBRLReacher-v0',
     entry_point='envs.gym.reacher:ReacherEnv',
@@ -47,6 +58,16 @@ register(
 register(
     id='MBRLInvertedPendulum-v0',
     entry_point='envs.gym.inverted_pendulum:InvertedPendulumEnv',
+    max_episode_steps=100,
+)
+register(
+    id='MBRLInvertedPendulumA01-v0',
+    entry_point='envs.gym.inverted_pendulumA01:InvertedPendulumEnv',
+    max_episode_steps=100,
+)
+register(
+    id='MBRLInvertedPendulumO01-v0',
+    entry_point='envs.gym.inverted_pendulumO01:InvertedPendulumEnv',
     max_episode_steps=100,
 )
 register(
@@ -146,8 +167,28 @@ register(
     max_episode_steps=1000,
 )
 register(
+    id='gym_fwalker2dA01-v0',
+    entry_point='envs.gym.gym_fwalker2dA01:Walker2dEnv',
+    max_episode_steps=1000,
+)
+register(
+    id='gym_fwalker2dO01-v0',
+    entry_point='envs.gym.gym_fwalker2dO01:Walker2dEnv',
+    max_episode_steps=1000,
+)
+register(
     id='gym_fswimmer-v0',
     entry_point='envs.gym.gym_fswimmer:fixedSwimmerEnv',
+    max_episode_steps=1000,
+)
+register(
+    id='gym_fswimmerA01-v0',
+    entry_point='envs.gym.gym_fswimmerA01:fixedSwimmerEnv',
+    max_episode_steps=1000,
+)
+register(
+    id='gym_fswimmerO01-v0',
+    entry_point='envs.gym.gym_fswimmerO01:fixedSwimmerEnv',
     max_episode_steps=1000,
 )
 register(
@@ -171,12 +212,19 @@ env_name_to_gym_registry = {
     "half_cheetah": "MBRLHalfCheetah-v0",
     "swimmer": "MBRLSwimmer-v0",
     "ant": "MBRLAnt-v0",
+    
     "hopper": "MBRLHopper-v0",
+    "hopperA01": "MBRLHopperA01-v0",
+    "hopperO01": "MBRLHopperO01-v0",
+    
     "reacher": "MBRLReacher-v0",
     "walker2d": "MBRLWalker2d-v0",
 
     # second batch
     "invertedPendulum": "MBRLInvertedPendulum-v0",
+    "invertedPendulumA01": "MBRLInvertedPendulumA01-v0",
+    "invertedPendulumO01": "MBRLInvertedPendulumO01-v0",
+    
     "acrobot": 'MBRLAcrobot-v0',
     "cartpole": 'MBRLCartpole-v0',
     "mountain": 'MBRLMountain-v0',
@@ -198,11 +246,19 @@ env_name_to_gym_registry = {
 
     "gym_cartpoleO01": "gym_cartpoleO01-v0",
     "gym_cartpoleO001": "gym_cartpoleO001-v0",
+    
 
     "gym_fant": "gym_fant-v0",
+    
     "gym_fswimmer": "gym_fswimmer-v0",
+    "gym_fswimmerA01": "gym_fswimmerA01-v0",
+    "gym_fswimmerO01": "gym_fswimmerO01-v0",
+    
     "gym_fhopper": "gym_fhopper-v0",
+    
     "gym_fwalker2d": "gym_fwalker2d-v0",
+    "gym_fwalker2dA01": "gym_fwalker2dA01-v0",
+    "gym_fwalker2dO01": "gym_fwalker2dO01-v0",
 
     "gym_humanoid": "gym_humanoid-v0",
     "gym_slimhumanoid": "gym_slimhumanoid-v0",

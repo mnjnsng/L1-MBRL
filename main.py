@@ -25,7 +25,6 @@ def log_tabular_results(returns, itr, train_collection):
 
     logger.dump_tabular()
 
-
 def get_data_from_random_rollouts(params, env, normalization_scope=None):
     train_collection = DataCollection(batch_size=params['dynamics']['batch_size'],
                                       max_size=params['max_train_data'],
@@ -34,6 +33,7 @@ def get_data_from_random_rollouts(params, env, normalization_scope=None):
                                     max_size=params['max_val_data'],
                                     shuffle=False)
     rollout_sampler = RolloutSampler(env)
+    rollout_sampler.epsilon= params['epsilon']
     random_paths = rollout_sampler.generate_random_rollouts(
         num_paths=params['num_path_random'],
         horizon=params['env_horizon']
@@ -218,13 +218,15 @@ def train(params):
 
         logger.info("Done training policy.")
 
+        print(params['adaptive_control'])
+        print("------------------------------------")
 
         # Generate on-policy rollouts.
         logger.info("Generating on-policy rollouts.")
         rl_paths = rollout_sampler.sample(
             num_paths=params['num_path_onpol'],
             horizon=params['env_horizon'],
-            use_adaptive_controller=True,
+            use_adaptive_controller=params['adaptive_control']
         )
         logger.info("Done generating on-policy rollouts.")
 
@@ -254,6 +256,8 @@ def train(params):
             # Compute metrics and log results
             returns = np.array([sum(path["rewards"]) for path in rl_paths])
             log_tabular_results(returns, itr, train_collection)
+
+            returns = np.array([sum(path["rewards"]) for path in rl_paths])
 
         # save dynamics model if applicable
         save_cur_iter_dynamics_model(params, saver, sess, itr)

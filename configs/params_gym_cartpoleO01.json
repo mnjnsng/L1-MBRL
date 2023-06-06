@@ -5,6 +5,7 @@
   "model_save_dir": "/tmp/gym_cartpoleO01_models/",
   "restore_variables": false,
   "start_onpol_iter": 0,
+  "epsilon":1,
   "onpol_iters": 40,
   "num_path_random": 25,
   "num_path_onpol": 25,
