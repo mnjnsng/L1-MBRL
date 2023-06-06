@@ -54,7 +54,7 @@ Run experiments using the following command:
 
 Experiment results will be logged to `./experiments/<exp_save_dir>/<experiment_name>`
 
-e.g. `python main.py --env invertedPendulum --exp_name test-exp --sub_exp_name test-exp-dir --l1_ac 1
+e.g. `python main.py --env invertedPendulum --exp_name test-exp --sub_exp_name test-exp-dir --l1_ac 1'
 
 
 ## Change configurations
