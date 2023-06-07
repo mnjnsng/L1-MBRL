@@ -51,6 +51,8 @@ Run experiments using the following command:
 - `env_name`: one of `(half_cheetah, ant, hopper, swimmer)`
 - `exp_name`: what you want to call your experiment
 - `sub_exp_name`: partial path for saving experiment logs and results
+- `l1_ac`: 1 for switching on the adaptive controller else 0
+- `test`: [0, 0] first argument for testing and second for the adaptive controller
 
 Experiment results will be logged to `./experiments/<exp_save_dir>/<experiment_name>`
 
