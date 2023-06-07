@@ -78,7 +78,7 @@ class RolloutSampler:
                 controller.dyn_model.update_randomness()
 
             path, total_timesteps = self._rollout_single_path(horizon, controller,
-                                                             total_timesteps, use_adaptive_controller, obs_noise, act_noise, record,itr)
+                                                             total_timesteps, use_adaptive_controller, record,itr)
             paths.append(path)
             path_num += 1
             if total_timesteps >= num_paths * horizon:
@@ -118,12 +118,12 @@ class RolloutSampler:
 
         return np.expand_dims(pred_obs-x,axis=-1)[i], jacobian[i][:,-u.shape[0]:]
 
-    def _rollout_single_path(self, horizon, controller, total_timesteps,use_adaptive_controller=False, obs_noise=False, act_noise=False, record=False,itr=None):
+    def _rollout_single_path(self, horizon, controller, total_timesteps,use_adaptive_controller=False, record=False,itr=None):
         path = Path()
         obs = self.env.reset()
         frames=[]
         self.u0= None
-        affinization_counter = 0
+        affinization_counter = 1
 
         for horizon_num in range(1, horizon + 1):
             if record:
@@ -160,26 +160,11 @@ class RolloutSampler:
 
                 u_bl=action
                 u, l1_metadata =adaptive_controller.get_control_input(obs,u_bl)
-                
-
-                if act_noise:
-                    u += np.random.uniform(low=-0.1, high=0.1, size=action.shape)
-
                 next_obs, reward, done, _info = self.env.step(u)
 
-                if obs_noise:
-                    next_obs += np.random.uniform(low=-0.1, high=0.1, size=obs.shape)
-
-
             else:
-
-                if act_noise:
-                    action += np.random.uniform(low=-0.1, high=0.1, size=action.shape)
                 
                 next_obs, reward, done, _info = self.env.step(action)
-
-                if obs_noise:
-                    next_obs += np.random.uniform(low=-0.1, high=0.1, size=obs.shape)
 
             path.add_timestep(obs, action, next_obs, reward)
 

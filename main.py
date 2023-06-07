@@ -257,7 +257,23 @@ def train(params):
             returns = np.array([sum(path["rewards"]) for path in rl_paths])
             log_tabular_results(returns, itr, train_collection)
 
+
+        if int(params["testing"][0])  and itr==end_itr-1:
+
+            print("--------------testing-----------------")
+            
+            rl_paths = rollout_sampler.sample(
+                    num_paths=params['num_path_onpol'],
+                    horizon=params['env_horizon'],
+                    use_adaptive_controller= int(params["testing"][1]))
+
             returns = np.array([sum(path["rewards"]) for path in rl_paths])
+                
+            logger.clear_tabular()
+            logger.record_tabular('AverageReturn', np.mean(returns))
+            logger.record_tabular('MinimumReturn', np.min(returns))
+            logger.record_tabular('MaximumReturn', np.max(returns))
+            logger.dump_tabular()
 
         # save dynamics model if applicable
         save_cur_iter_dynamics_model(params, saver, sess, itr)

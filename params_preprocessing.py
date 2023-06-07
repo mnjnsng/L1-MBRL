@@ -10,6 +10,7 @@ def parse_args():
     parser.add_argument('--sub_exp_name', default="")
     parser.add_argument('--algo', default='trpo')
     parser.add_argument('--l1_ac', default=0, type= int)
+    parser.add_argument('--test', nargs='+', default='0 0')
     parser.add_argument('--param_path', default=None)
     parser_options = parser.parse_args()
     exp_name = '%s/%s/%s' % (parser_options.env, parser_options.sub_exp_name, parser_options.exp_name)
@@ -41,5 +42,6 @@ def process_params(options, param_path=None):
     params['algo'] = options.algo
     params['adaptive_control']=options.l1_ac
     assert params['env_name'] == options.env
+    params['testing']=options.test
     # assert options.algo in options.exp_name
     return params
