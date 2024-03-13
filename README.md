@@ -1,4 +1,4 @@
-# Robust Adaptive Model Based Reinforcement Learning
+# Robust Model Based Reinforcement Learning
 
 
 We modified [this repo](https://github.com/WilsonWangTHU/mbbl-metrpo), which is the repo shared by the authors of MBBL-METRPO
