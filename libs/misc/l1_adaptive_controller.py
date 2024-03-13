@@ -76,8 +76,8 @@ class L1_adapt(object):
     def adaptive_law(self, x_tilde):
 
         mat_expm = expm(self.As*self.Ts)
-        Phi = inv(self.As) * (mat_expm - np.eye(self.n))
-        adapt_gain = -inv(Phi)*mat_expm
+        Phi = inv(self.As) @ (mat_expm - np.eye(self.n))
+        adapt_gain = -inv(Phi)@ mat_expm
 
         gg = np.concatenate(
             (self.g, self.g_perp), axis=1)  # [g,g_perp]
